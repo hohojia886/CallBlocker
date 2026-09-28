@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">儀表板</string>
+    <string name="tab_history">攔截紀錄</string>
+    <string name="tab_block_list">封鎖名單</string>
+    <string name="tab_settings">防護設定</string>
+
+    <!-- Role Warning Banner -->
+    <string name="banner_role_warning_title">未設定為預設來電篩選 App</string>
+    <string name="banner_role_warning_sub">為了能在響鈴前自動阻擋騷擾與未知來電，請將 Call Blocker 設定為預設來電篩選與防護 App。</string>
+    <string name="btn_set_default_role">設為預設 App</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">通話防護儀表板</string>
+    <string name="stat_today">今日攔截</string>
+    <string name="stat_this_month">本月攔截</string>
+    <string name="stat_this_year">今年度攔截</string>
+    <string name="stat_lifetime">歷史總攔截</string>
+    <string name="reason_breakdown_title">攔截原因比例分析</string>
+    <string name="no_records_yet">尚無攔截紀錄</string>
+    <string name="reason_no_number">無號碼來電</string>
+    <string name="reason_non_contact">非聯絡人來電</string>
+    <string name="reason_international">國外/境外來電</string>
+    <string name="reason_blacklist">自訂封鎖名單</string>
+    <string name="reason_other">其他</string>
+
+    <!-- History Screen -->
+    <string name="history_title">攔截紀錄</string>
+    <string name="history_clear_all">清空紀錄</string>
+    <string name="history_empty">目前尚無通話紀錄</string>
+    <string name="chip_blocked">已攔截</string>
+    <string name="chip_allowed">准許接聽</string>
+    <string name="chip_silenced">已靜音</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">封鎖名單管理</string>
+    <string name="add_number_section_title">新增封鎖號碼 / 萬用字元</string>
+    <string name="input_number_label">輸入號碼或前綴</string>
+    <string name="input_number_placeholder">例如: +886912345678 或 +886912*</string>
+    <string name="input_note_label">備註</string>
+    <string name="input_note_placeholder">如: 推銷電話</string>
+    <string name="btn_pick_contact">從通訊錄選擇</string>
+    <string name="btn_add_to_block_list">新增至封鎖名單</string>
+    <string name="dynamic_preview_warning">⚠️ 動態影響範圍預覽：此規則將會攔截以下地區的所有來電</string>
+    <string name="search_placeholder">搜尋號碼或備註...</string>
+    <string name="blocked_numbers_count">已封鎖名單 (%1$d 筆)</string>
+    <string name="no_blocked_numbers">目前尚無封鎖號碼，可點擊右下角按鈕新增</string>
+    <string name="search_no_results">找不到符合「%1$s」的封鎖號碼</string>
+    <string name="btn_add_blocked_number">新增封鎖號碼</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">防護與系統設定</string>
+    <string name="section_basic_rules">攔截規則</string>
+    <string name="rule_block_unknown_title">阻擋無顯示號碼來電</string>
+    <string name="rule_block_unknown_sub">拒接未顯示號碼之來電</string>
+    <string name="rule_block_non_contacts_title">阻擋非聯絡人來電</string>
+    <string name="rule_block_non_contacts_sub">僅允許通訊錄聯絡人撥入</string>
+    <string name="rule_auto_block_rejected_title">自動將拒接電話加入封鎖名單</string>
+    <string name="rule_auto_block_rejected_sub">攔截時自動將號碼加入名單</string>
+
+    <!-- Outgoing Callback Exemption Rule -->
+    <string name="rule_outgoing_exemption_title">允許近期主動撥出電話回撥</string>
+    <string name="rule_outgoing_exemption_sub">近期主動撥打之號碼回撥時放行</string>
+    <string name="option_exemption_off">停用</string>
+    <string name="option_exemption_1_day">1 天內</string>
+    <string name="option_exemption_3_days">3 天內</string>
+    <string name="option_exemption_1_week">1 週內</string>
+
+    <string name="section_interception_action">攔截處置動作</string>
+    <string name="action_reject_title">直接掛斷 (Reject)</string>
+    <string name="action_reject_sub">偵測到黑名單時立刻掛斷對方，對方會聽到嘟嘟聲。</string>
+    <string name="action_silence_title">僅靜音 (Silence)</string>
+    <string name="action_silence_sub">不掛斷但手機不響鈴且不顯示來電畫面，讓對方以為無人接聽。</string>
+
+    <string name="section_international_protection">國際電話防護</string>
+    <string name="rule_block_international_title">自動阻擋國外來電</string>
+    <string name="rule_block_international_sub">拒接所有境外撥入電話</string>
+
+    <string name="section_language_settings">語言設定 (App Language)</string>
+    <string name="label_app_language">選擇 App 界面語言</string>
+    <string name="label_system_default">系統預設</string>
+
+    <string name="section_block_list_management">封鎖名單管理</string>
+    <string name="btn_manage_block_list">管理自訂封鎖名單 (Wildcard &amp; E.164)</string>
+    <string name="btn_import_system_block_list">匯入 Android 系統封鎖名單</string>
+    <string name="btn_export_system_block_list">同步名單至 Android 系統封鎖名單</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">系統封鎖名單</string>
+    <string name="import_source_blocked_contact">封鎖聯絡人</string>
+    <string name="import_source_blocked_contact_with_name">封鎖聯絡人 (%1$s)</string>
+    <string name="import_error_empty">未在系統封鎖庫或封鎖聯絡人中找到號碼</string>
+    <string name="import_summary_added_and_updated">成功新增 %1$d 筆，更新 %2$d 筆標記</string>
+    <string name="import_summary_added_only">成功新增 %1$d 筆封鎖號碼</string>
+    <string name="import_summary_updated_only">已比對現有封鎖名單，成功更新 %1$d 筆號碼標記</string>
+    <string name="import_summary_already_latest">現有封鎖名單已是最新資料，無重複匯入</string>
+
+    <string name="export_error_empty">無可匯出的封鎖號碼</string>
+    <string name="export_error_failed">匯出至系統封鎖名單失敗</string>
+    <string name="export_summary_added">成功將 %1$d 筆號碼寫入 Android 系統封鎖名單</string>
+    <string name="export_summary_already_exists">所有號碼已存在於系統封鎖名單中，無需重複同步</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">必須授予權限才能正常運作。</string>
+    <string name="toast_cannot_read_phone_number">無法讀取電話號碼</string>
+    <string name="toast_error">錯誤：%1$s</string>
+    <string name="toast_backup_created">已成功建立備份！</string>
+    <string name="toast_restore_success">已成功還原資料庫！</string>
+    <string name="toast_dashboard_reset">儀表板數據已重置！</string>
+    <string name="toast_history_reset">攔截紀錄已重置！</string>
+    <string name="toast_reset_success">重置成功</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">暫時跳過</string>
+    <string name="label_password">密碼</string>
+    <string name="label_note_format">備註：%1$s</string>
+
+    <string name="section_data_management">資料管理、加密備份與重置</string>
+    <string name="btn_reset_dashboard">重置通話防護儀表板</string>
+    <string name="btn_reset_history">重置攔截紀錄</string>
+    <string name="btn_create_backup">建立加密備份 (.spamdb)</string>
+    <string name="btn_restore_database">還原資料庫</string>
+    <string name="btn_reset_database">重置並清空資料庫 (Reset Database)</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">重置通話防護儀表板？</string>
+    <string name="dialog_reset_dashboard_message">此動作將會清空儀表板所有的歷史統計數據與圖表。此動作無法復原！</string>
+
+    <string name="dialog_reset_history_title">重置攔截紀錄？</string>
+    <string name="dialog_reset_history_message">此動作將會刪除所有的攔截歷史紀錄。此動作無法復原！</string>
+
+    <string name="dialog_reset_title">確定要重置並清空資料庫？</string>
+    <string name="dialog_reset_message">此動作將會刪除所有自訂/匯入的封鎖號碼以及全部通話攔截歷史紀錄。此動作無法復原！</string>
+    <string name="dialog_confirm_reset">確定清空</string>
+
+    <string name="dialog_backup_pwd_title">設定備份加密密碼</string>
+    <string name="dialog_backup_pwd_msg">請輸入密碼以派生 AES-256 加密金鑰。還原時需輸入相同的密碼。</string>
+    <string name="dialog_restore_pwd_title">輸入解密密碼</string>
+    <string name="dialog_restore_pwd_msg">請輸入該備份檔對應的加密密碼：</string>
+
+    <string name="dialog_dialer_role_title">已比對通訊錄封鎖名單！</string>
+    <string name="dialog_dialer_role_processed_count">已成功處理 %1$d 筆封鎖號碼。</string>
+    <string name="dialog_dialer_role_unlock_header">💡 解鎖剩餘原生封鎖名單與寫回系統：</string>
+    <string name="dialog_dialer_role_unlock_msg">若要讀取或寫回原廠 Phone App 的原生封鎖庫，Android 系統規範要求將 App 暫時設定為「預設電話 App」。</string>
+    <string name="dialog_dialer_role_tip">⚠️ 重要提示：處理完成後，請務必至手機「系統設定 -&gt; 預設應用程式 -&gt; 電話應用程式」手動切換回原本習慣使用的電話 App，否則可能無法正常接聽電話！</string>
+    <string name="dialog_dialer_role_confirm">設定預設電話並解鎖剩餘號碼</string>
+    <string name="note_auto_blocked">自動封鎖拒接電話</string>
+
+    <string name="btn_cancel">取消</string>
+    <string name="btn_confirm">確定</string>
+    <string name="btn_keep_as_is">保持現狀</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">歡迎使用 Call Blocker</string>
+    <string name="onboarding_welcome_desc">您最強大的隱私守衛，抵禦垃圾來電、推銷與不受歡迎的電話。功能強大、完全離線運作且安全無虞。</string>
+    <string name="onboarding_privacy_title">隱私權優先聲明</string>
+    <string name="onboarding_privacy_desc">我們需要存取您的「通訊錄」與「通話紀錄」以比對來電號碼。<b>所有資料 100% 在您的設備上進行本機處理。</b>我們絕對不會將您的任何資料上傳至任何伺服器。</string>
+    <string name="onboarding_btn_next">下一步</string>
+
+    <string name="onboarding_permission_title">需要權限授權</string>
+    <string name="onboarding_permission_desc">Call Blocker 需要以下權限才能正常運作，請在下一個提示框中授予權限。</string>
+    <string name="onboarding_btn_grant_permissions">授予權限</string>
+
+    <string name="onboarding_role_title">最後一步：來電篩選角色</string>
+    <string name="onboarding_role_desc">為了能在手機響鈴前主動攔截來電，Call Blocker 需要被設定為預設的「來電篩選應用程式」。</string>
+    <string name="onboarding_btn_grant_role">授予角色並開始使用</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">來電攔截通知</string>
+    <string name="notification_blocked_title">已攔截一通來電</string>
+    <string name="notification_blocked_text">已為您阻擋來自 %1$s 的電話</string>
+</resources>

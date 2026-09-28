@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_history">Verlauf</string>
+    <string name="tab_block_list">Sperrliste</string>
+    <string name="tab_settings">Einstellungen</string>
+
+    <!-- Role Warning Banner -->
+    <string name="banner_role_warning_title">Nicht als Standard-Anruffilter-App festgelegt</string>
+    <string name="banner_role_warning_sub">Um Spam-Anrufe aktiv zu blockieren, legen Sie Call Blocker als Standard-Anruffilter-App fest.</string>
+    <string name="btn_set_default_role">Als Standard festlegen</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Anrufschutz-Dashboard</string>
+    <string name="stat_today">Heute blockiert</string>
+    <string name="stat_this_month">Diesen Monat blockiert</string>
+    <string name="stat_this_year">Dieses Jahr blockiert</string>
+    <string name="stat_lifetime">Insgesamt blockiert</string>
+    <string name="reason_breakdown_title">Analyse der Blockierungsgründe</string>
+    <string name="no_records_yet">Noch keine Anrufe blockiert</string>
+    <string name="reason_no_number">Unbekannte / Anonyme Nummer</string>
+    <string name="reason_non_contact">Nicht in den Kontakten</string>
+    <string name="reason_international">Internationaler Anruf</string>
+    <string name="reason_blacklist">Benutzerdefinierte Sperrliste</string>
+    <string name="reason_other">Sonstige</string>
+
+    <!-- History Screen -->
+    <string name="history_title">Blockierungsverlauf</string>
+    <string name="history_clear_all">Verlauf löschen</string>
+    <string name="history_empty">Kein Anrufverlauf vorhanden</string>
+    <string name="chip_blocked">Blockiert</string>
+    <string name="chip_allowed">Zugelassen</string>
+    <string name="chip_silenced">Stummgeschaltet</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">Sperrlisten-Verwaltung</string>
+    <string name="add_number_section_title">Nummer oder Platzhalter hinzufügen</string>
+    <string name="input_number_label">Nummer oder Vorwahl eingeben</string>
+    <string name="input_number_placeholder">z.B. +886912345678 oder +886912*</string>
+    <string name="input_note_label">Notiz</string>
+    <string name="input_note_placeholder">z.B. Werbeanruf</string>
+    <string name="btn_pick_contact">Aus Kontakten auswählen</string>
+    <string name="btn_add_to_block_list">Zur Sperrliste hinzufügen</string>
+    <string name="dynamic_preview_warning">⚠️ Vorschau: Diese Regel blockiert alle Anrufe aus folgenden Ländern:</string>
+    <string name="search_placeholder">Nummer oder Notiz suchen...</string>
+    <string name="blocked_numbers_count">Sperrliste (%1$d Einträge)</string>
+    <string name="no_blocked_numbers">Keine blockierten Nummern. Nutzen Sie den Button unten rechts.</string>
+    <string name="search_no_results">Keine Nummern gefunden für \"%1$s\"</string>
+    <string name="btn_add_blocked_number">Nummer blockieren</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Schutz &amp; Systemeinstellungen</string>
+    <string name="section_basic_rules">Blockierungsregeln</string>
+    <string name="rule_block_unknown_title">Anonyme Anrufe blockieren</string>
+    <string name="rule_block_unknown_sub">Anrufe ohne Anrufer-ID abweisen</string>
+    <string name="rule_block_non_contacts_title">Anrufe von Nicht-Kontakten blockieren</string>
+    <string name="rule_block_non_contacts_sub">Nur Anrufe von Kontakten zulassen</string>
+    <string name="rule_auto_block_rejected_title">Abgewiesene Anrufe zur Sperrliste hinzufügen</string>
+    <string name="rule_auto_block_rejected_sub">Blockierte Nummern automatisch hinzufügen</string>
+
+    <!-- Outgoing Callback Exemption Rule -->
+    <string name="rule_outgoing_exemption_title">Rückrufe kürzlich gewählter Nummern zulassen</string>
+    <string name="rule_outgoing_exemption_sub">Rückrufe kürzlich gewählter Nummern zulassen</string>
+    <string name="option_exemption_off">Aus</string>
+    <string name="option_exemption_1_day">Innerhalb 1 Tages</string>
+    <string name="option_exemption_3_days">Innerhalb 3 Tage</string>
+    <string name="option_exemption_1_week">Innerhalb 1 Woche</string>
+
+    <string name="section_interception_action">Aktion beim Blockieren</string>
+    <string name="action_reject_title">Anruf abweisen (Auflegen)</string>
+    <string name="action_reject_sub">Trennt sofort die Verbindung zum blockierten Anrufer.</string>
+    <string name="action_silence_title">Stummschalten (Ignorieren)</string>
+    <string name="action_silence_sub">Schaltet das Klingeln stumm und blendet den Anruf aus, ohne aufzulegen, sodass es natürlich ausklingt.</string>
+
+    <string name="section_international_protection">Internationaler Anrufschutz</string>
+    <string name="rule_block_international_title">Internationale Anrufe blockieren</string>
+    <string name="rule_block_international_sub">Alle Auslandsanrufe blockieren</string>
+
+    <string name="section_language_settings">Spracheinstellungen (App Language)</string>
+    <string name="label_app_language">App-Sprache auswählen</string>
+    <string name="label_system_default">Systemstandard</string>
+
+    <string name="section_block_list_management">Sperrlisten-Verwaltung</string>
+    <string name="btn_manage_block_list">Eigene Sperrliste verwalten (Platzhalter &amp; E.164)</string>
+    <string name="btn_import_system_block_list">Android-System-Sperrliste importieren</string>
+    <string name="btn_export_system_block_list">Liste mit Android-System-Sperrliste synchronisieren</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">System-Sperrliste</string>
+    <string name="import_source_blocked_contact">Blockierter Kontakt</string>
+    <string name="import_source_blocked_contact_with_name">Blockierter Kontakt (%1$s)</string>
+    <string name="import_error_empty">Keine Nummern in System-Sperrliste oder Kontakten gefunden</string>
+    <string name="import_summary_added_and_updated">%1$d Nummern hinzugefügt und %2$d Notizen aktualisiert</string>
+    <string name="import_summary_added_only">%1$d blockierte Nummern erfolgreich hinzugefügt</string>
+    <string name="import_summary_updated_only">%1$d Notizen aktualisiert</string>
+    <string name="import_summary_already_latest">Sperrliste ist bereits auf dem neuesten Stand</string>
+
+    <string name="export_error_empty">Keine eigenen blockierten Nummern zum Exportieren</string>
+    <string name="export_error_failed">Exportieren in System-Sperrliste fehlgeschlagen</string>
+    <string name="export_summary_added">%1$d Nummern erfolgreich mit der Android-System-Sperrliste synchronisiert</string>
+    <string name="export_summary_already_exists">Alle Nummern existieren bereits in der System-Sperrliste</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">Berechtigungen erforderlich, um ordnungsgemäß zu funktionieren.</string>
+    <string name="toast_cannot_read_phone_number">Telefonnummer kann nicht gelesen werden</string>
+    <string name="toast_error">Fehler: %1$s</string>
+    <string name="toast_backup_created">Backup erfolgreich erstellt!</string>
+    <string name="toast_restore_success">Datenbank erfolgreich wiederhergestellt!</string>
+    <string name="toast_dashboard_reset">Dashboard zurückgesetzt!</string>
+    <string name="toast_history_reset">Verlauf zurückgesetzt!</string>
+    <string name="toast_reset_success">Erfolgreich</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">Vorerst überspringen</string>
+    <string name="label_password">Passwort</string>
+    <string name="label_note_format">Notiz: %1$s</string>
+
+    <string name="section_data_management">Datenverwaltung &amp; Sicherung</string>
+    <string name="btn_reset_dashboard">Anrufschutz-Dashboard zurücksetzen</string>
+    <string name="btn_reset_history">Blockierungsverlauf zurücksetzen</string>
+    <string name="btn_create_backup">Verschlüsseltes Backup erstellen (.spamdb)</string>
+    <string name="btn_restore_database">Datenbank wiederherstellen</string>
+    <string name="btn_reset_database">Datenbank zurücksetzen &amp; löschen</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">Anrufschutz-Dashboard zurücksetzen?</string>
+    <string name="dialog_reset_dashboard_message">Diese Aktion löscht dauerhaft alle Dashboard-Statistiken. Dies kann nicht rückgängig gemacht werden!</string>
+
+    <string name="dialog_reset_history_title">Blockierungsverlauf zurücksetzen?</string>
+    <string name="dialog_reset_history_message">Diese Aktion löscht dauerhaft den gesamten Blockierungsverlauf. Dies kann nicht rückgängig gemacht werden!</string>
+
+    <string name="dialog_reset_title">Datenbank zurücksetzen?</string>
+    <string name="dialog_reset_message">Alle blockierten Nummern und der Anrufverlauf werden unwiderruflich gelöscht!</string>
+    <string name="dialog_confirm_reset">Alles löschen</string>
+
+    <string name="dialog_backup_pwd_title">Passwort für Backup festlegen</string>
+    <string name="dialog_backup_pwd_msg">Passwort für AES-256-Schlüssel eingeben. Wird zur Wiederherstellung benötigt.</string>
+    <string name="dialog_restore_pwd_title">Passwort zur Entschlüsselung eingeben</string>
+    <string name="dialog_restore_pwd_msg">Geben Sie das Passwort der Sicherungsdatei ein:</string>
+
+    <string name="dialog_dialer_role_title">Blockierte Kontakte verarbeitet!</string>
+    <string name="dialog_dialer_role_processed_count">%1$d blockierte Nummern erfolgreich verarbeitet.</string>
+    <string name="dialog_dialer_role_unlock_header">💡 System-Sperrliste freischalten und synchronisieren:</string>
+    <string name="dialog_dialer_role_unlock_msg">Zum Lesen oder Schreiben der Android-System-Sperrliste muss Call Blocker als \"Standard-Telefon-App\" festgelegt werden.</string>
+    <string name="dialog_dialer_role_tip">⚠️ Wichtig: Nach der Verarbeitung MÜSSEN Sie in den Systemeinstellungen (Einstellungen -&gt; Standard-Apps -&gt; Telefon-App) manuell zu Ihrer gewohnten Telefon-App zurückwechseln, da Sie sonst möglicherweise keine Anrufe entgegennehmen können!</string>
+    <string name="dialog_dialer_role_confirm">Als Standard-Telefon festlegen</string>
+    <string name="note_auto_blocked">Automatisch hinzugefügter abgewiesener Anruf</string>
+
+    <string name="btn_cancel">Abbrechen</string>
+    <string name="btn_confirm">Bestätigen</string>
+    <string name="btn_keep_as_is">Unverändert lassen</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">Willkommen bei Call Blocker</string>
+    <string name="onboarding_welcome_desc">Ihr ultimativer Datenschutzwächter gegen Spam, Telemarketing und unerwünschte Anrufe. Leistungsstark, komplett offline und sicher.</string>
+    <string name="onboarding_privacy_title">Ihre Privatsphäre an erster Stelle</string>
+    <string name="onboarding_privacy_desc">Wir benötigen Zugriff auf Ihre Kontakte und Anruflisten, um eingehende Nummern abzugleichen. <b>Alle Daten werden zu 100 % lokal auf Ihrem Gerät verarbeitet.</b> Wir laden Ihre Daten niemals auf irgendwelche Server hoch.</string>
+    <string name="onboarding_btn_next">Weiter</string>
+
+    <string name="onboarding_permission_title">Erforderliche Berechtigungen</string>
+    <string name="onboarding_permission_desc">Call Blocker benötigt die folgenden Berechtigungen, um richtig zu funktionieren. Bitte gewähren Sie diese in der nächsten Eingabeaufforderung.</string>
+    <string name="onboarding_btn_grant_permissions">Berechtigungen erteilen</string>
+
+    <string name="onboarding_role_title">Letzter Schritt: Anruffilterungs-Rolle</string>
+    <string name="onboarding_role_desc">Um eingehende Anrufe aktiv zu blockieren, bevor Ihr Telefon klingelt, muss Call Blocker als Standard-App für die Anruffilterung festgelegt werden.</string>
+    <string name="onboarding_btn_grant_role">Rolle gewähren &amp; Starten</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Anrufabfang-Benachrichtigungen</string>
+    <string name="notification_blocked_title">Anruf abgefangen</string>
+    <string name="notification_blocked_text">Anruf von %1$s erfolgreich blockiert</string>
+</resources>

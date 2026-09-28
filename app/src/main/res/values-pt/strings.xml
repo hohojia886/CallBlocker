@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">Painel</string>
+    <string name="tab_history">Histórico</string>
+    <string name="tab_block_list">Lista de Bloqueio</string>
+    <string name="tab_settings">Configurações</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Painel de Proteção de Chamadas</string>
+    <string name="stat_today">Bloqueadas Hoje</string>
+    <string name="stat_this_month">Bloqueadas Este Mês</string>
+    <string name="stat_this_year">Bloqueadas Este Ano</string>
+    <string name="stat_lifetime">Total de Bloqueios</string>
+    <string name="reason_breakdown_title">Análise dos Motivos de Bloqueio</string>
+    <string name="no_records_yet">Nenhuma chamada bloqueada ainda</string>
+    <string name="reason_no_number">Número Privado / Desconhecido</string>
+    <string name="reason_non_contact">Chamada Fora dos Contatos</string>
+    <string name="reason_international">Chamada Internacional</string>
+    <string name="reason_blacklist">Lista Personalizada</string>
+    <string name="reason_other">Outro</string>
+
+    <!-- History Screen -->
+    <string name="history_title">Histórico de Bloqueios</string>
+    <string name="history_clear_all">Limpar Histórico</string>
+    <string name="history_empty">Nenhum histórico de chamadas encontrado</string>
+    <string name="chip_blocked">Bloqueada</string>
+    <string name="chip_allowed">Permitida</string>
+    <string name="chip_silenced">Silenciada</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">Gerenciamento da Lista de Bloqueio</string>
+    <string name="add_number_section_title">Adicionar Número ou Curinga</string>
+    <string name="input_number_label">Digite o Número ou Prefixo</string>
+    <string name="input_number_placeholder">ex. +886912345678 ou +886912*</string>
+    <string name="input_note_label">Nota</string>
+    <string name="input_note_placeholder">ex. Telemarketing</string>
+    <string name="btn_pick_contact">Selecionar dos Contatos</string>
+    <string name="btn_add_to_block_list">Adicionar à Lista</string>
+    <string name="dynamic_preview_warning">⚠️ Pré-visualização: Esta regra bloqueará chamadas dos seguintes países:</string>
+    <string name="search_placeholder">Buscar número ou nota...</string>
+    <string name="blocked_numbers_count">Lista de Bloqueio (%1$d itens)</string>
+    <string name="no_blocked_numbers">Nenhum número bloqueado. Toque no botão abaixo para adicionar.</string>
+    <string name="search_no_results">Nenhum número encontrado para \"%1$s\"</string>
+    <string name="btn_add_blocked_number">Adicionar Número a Bloquear</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Configurações de Proteção e Sistema</string>
+    <string name="section_basic_rules">Regras de Bloqueio</string>
+    <string name="rule_block_unknown_title">Bloquear Números Privados</string>
+    <string name="rule_block_unknown_sub">Rejeitar automaticamente chamadas sem identificação</string>
+    <string name="rule_block_non_contacts_title">Bloquear Fora dos Contatos</string>
+    <string name="rule_block_non_contacts_sub">Permitir apenas chamadas salvas na sua agenda</string>
+    <string name="rule_auto_block_rejected_title">Adicionar chamadas rejeitadas à lista</string>
+    <string name="rule_auto_block_rejected_sub">Adicionar automaticamente números rejeitados à lista de bloqueio</string>
+
+    <string name="section_interception_action">Ação de Interceptação</string>
+    <string name="action_reject_title">Rejeitar Chamada (Desligar)</string>
+    <string name="action_reject_sub">Desconecta instantaneamente o chamador bloqueado.</string>
+    <string name="action_silence_title">Silenciar Chamada (Ignorar)</string>
+    <string name="action_silence_sub">Silencia o toque e oculta a chamada sem desligar, deixando-a tocar naturalmente.</string>
+
+    <string name="section_international_protection">Proteção de Chamadas Internacionais</string>
+    <string name="rule_block_international_title">Bloquear Chamadas Internacionais</string>
+    <string name="rule_block_international_sub">Detectar ISO do SIM e bloquear chamadas fora da região do SIM</string>
+
+    <string name="section_language_settings">Configurações de Idioma (App Language)</string>
+    <string name="label_app_language">Escolher Idioma do Aplicativo</string>
+    <string name="label_system_default">Padrão do Sistema</string>
+
+    <string name="section_block_list_management">Gerenciamento da Lista de Bloqueio</string>
+    <string name="btn_manage_block_list">Gerenciar Lista Personalizada (Curingas e E.164)</string>
+    <string name="btn_import_system_block_list">Importar Lista do Sistema Android</string>
+    <string name="btn_export_system_block_list">Sincronizar Lista com o Sistema Android</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">Lista do Sistema</string>
+    <string name="import_source_blocked_contact">Contato Bloqueado</string>
+    <string name="import_source_blocked_contact_with_name">Contato Bloqueado (%1$s)</string>
+    <string name="import_error_empty">Nenhum número encontrado na lista do sistema ou contatos</string>
+    <string name="import_summary_added_and_updated">%1$d números adicionados e %2$d notas atualizadas com sucesso</string>
+    <string name="import_summary_added_only">%1$d números bloqueados adicionados com sucesso</string>
+    <string name="import_summary_updated_only">%1$d notas de números atualizadas com sucesso</string>
+    <string name="import_summary_already_latest">A lista de bloqueio atual já está atualizada</string>
+
+    <string name="export_error_empty">Nenhum número bloqueado personalizado para exportar</string>
+    <string name="export_error_failed">Falha ao exportar para a lista do sistema</string>
+    <string name="export_summary_added">%1$d números sincronizados com sucesso com a lista do sistema Android</string>
+    <string name="export_summary_already_exists">Todos os números já existem na lista do sistema</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">Permissões necessárias para funcionar corretamente.</string>
+    <string name="toast_cannot_read_phone_number">Não foi possível ler o número de telefone</string>
+    <string name="toast_error">Erro: %1$s</string>
+    <string name="toast_backup_created">Backup criado com sucesso!</string>
+    <string name="toast_restore_success">Banco de dados restaurado com sucesso!</string>
+    <string name="toast_dashboard_reset">Painel redefinido com sucesso!</string>
+    <string name="toast_history_reset">Histórico redefinido com sucesso!</string>
+    <string name="toast_reset_success">Sucesso</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">Pular por enquanto</string>
+    <string name="label_password">Senha</string>
+    <string name="label_note_format">Nota: %1$s</string>
+
+    <string name="section_data_management">Gerenciamento de Dados e Backup</string>
+    <string name="btn_reset_dashboard">Redefinir Painel de Proteção</string>
+    <string name="btn_reset_history">Redefinir Histórico de Bloqueios</string>
+    <string name="btn_create_backup">Criar Backup Criptografado (.spamdb)</string>
+    <string name="btn_restore_database">Restaurar Banco de Dados</string>
+    <string name="btn_reset_database">Redefinir e Limpar Banco de Dados</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">Redefinir Painel de Proteção?</string>
+    <string name="dialog_reset_dashboard_message">Esta ação excluirá permanentemente todas as estatísticas do painel. Não pode ser desfeito!</string>
+
+    <string name="dialog_reset_history_title">Redefinir Histórico de Bloqueios?</string>
+    <string name="dialog_reset_history_message">Esta ação excluirá permanentemente todo o histórico de bloqueios. Não pode ser desfeito!</string>
+
+    <string name="dialog_reset_title">Redefinir e limpar banco de dados?</string>
+    <string name="dialog_reset_message">Esta ação excluirá permanentemente todos os números bloqueados e histórico. Não pode ser desfeito!</string>
+    <string name="dialog_confirm_reset">Limpar Tudo</string>
+
+    <string name="dialog_backup_pwd_title">Definir Senha de Backup</string>
+    <string name="dialog_backup_pwd_msg">Digite uma senha para a chave AES-256. A mesma senha será necessária para restaurar.</string>
+    <string name="dialog_restore_pwd_title">Digite a Senha de Descriptografia</string>
+    <string name="dialog_restore_pwd_msg">Digite a senha usada para criptografar este arquivo:</string>
+
+    <string name="dialog_dialer_role_title">Contatos bloqueados processados!</string>
+    <string name="dialog_dialer_role_processed_count">%1$d números bloqueados processados com sucesso.</string>
+    <string name="dialog_dialer_role_unlock_header">💡 Desbloquear o restante da lista do sistema e sincronizar:</string>
+    <string name="dialog_dialer_role_unlock_msg">Para ler ou escrever na lista do sistema Android, o aplicativo deve ser definido como \"Aplicativo de telefone padrão\".</string>
+    <string name="dialog_dialer_role_tip">⚠️ Importante: Após o processamento, você DEVE voltar manualmente para o seu aplicativo de telefone habitual nas configurações do sistema (Configurações -&gt; Aplicativos padrão -&gt; Aplicativo de telefone), caso contrário, poderá não receber chamadas normalmente!</string>
+    <string name="dialog_dialer_role_confirm">Definir Telefone Padrão</string>
+    <string name="note_auto_blocked">Chamada rejeitada adicionada automaticamente</string>
+
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_confirm">Confirmar</string>
+    <string name="btn_keep_as_is">Manter Atual</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">Bem-vindo ao CallBlocker</string>
+    <string name="onboarding_welcome_desc">Seu guarda-costas de privacidade definitivo contra spam, telemarketing e chamadas indesejadas. Poderoso, totalmente offline e seguro.</string>
+    <string name="onboarding_privacy_title">Sua Privacidade em Primeiro Lugar</string>
+    <string name="onboarding_privacy_desc">Precisamos de acesso aos seus Contatos e Histórico de Chamadas para verificar os números. <b>Todos os dados são processados 100% localmente no seu dispositivo.</b> Nunca enviamos seus dados para nenhum servidor.</string>
+    <string name="onboarding_btn_next">Avançar</string>
+
+    <string name="onboarding_permission_title">Permissões Necessárias</string>
+    <string name="onboarding_permission_desc">O CallBlocker precisa das seguintes permissões para funcionar corretamente. Por favor, conceda-as na próxima tela.</string>
+    <string name="onboarding_btn_grant_permissions">Conceder Permissões</string>
+
+    <string name="onboarding_role_title">Último Passo: Papel de Triagem de Chamadas</string>
+    <string name="onboarding_role_desc">Para bloquear ativamente as chamadas antes que o seu telefone toque, o CallBlocker precisa ser definido como o aplicativo padrão de triagem de chamadas.</string>
+    <string name="onboarding_btn_grant_role">Conceder e Iniciar</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Alertas de Interceptação de Chamadas</string>
+    <string name="notification_blocked_title">Chamada Interceptada</string>
+    <string name="notification_blocked_text">Chamada de %1$s bloqueada com sucesso</string>
+</resources>

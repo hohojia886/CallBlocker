@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">Панель</string>
+    <string name="tab_history">История</string>
+    <string name="tab_block_list">Черный список</string>
+    <string name="tab_settings">Настройки</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Панель защиты звонков</string>
+    <string name="stat_today">Заблокировано сегодня</string>
+    <string name="stat_this_month">Заблокировано за месяц</string>
+    <string name="stat_this_year">Заблокировано за год</string>
+    <string name="stat_lifetime">Всего заблокировано</string>
+    <string name="reason_breakdown_title">Анализ причин блокировки</string>
+    <string name="no_records_yet">Пока нет заблокированных звонков</string>
+    <string name="reason_no_number">Скрытый / Неизвестный номер</string>
+    <string name="reason_non_contact">Звонок не из контактов</string>
+    <string name="reason_international">Международный звонок</string>
+    <string name="reason_blacklist">Собственный список блокировки</string>
+    <string name="reason_other">Другое</string>
+
+    <!-- History Screen -->
+    <string name="history_title">История блокировок</string>
+    <string name="history_clear_all">Очистить историю</string>
+    <string name="history_empty">История звонков пуста</string>
+    <string name="chip_blocked">Заблокирован</string>
+    <string name="chip_allowed">Разрешен</string>
+    <string name="chip_silenced">Без звука</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">Управление черным списком</string>
+    <string name="add_number_section_title">Добавить номер или маску</string>
+    <string name="input_number_label">Введите номер или префикс</string>
+    <string name="input_number_placeholder">напр. +886912345678 или +886912*</string>
+    <string name="input_note_label">Заметка</string>
+    <string name="input_note_placeholder">напр. Реклама</string>
+    <string name="btn_pick_contact">Выбрать из контактов</string>
+    <string name="btn_add_to_block_list">Добавить в черный список</string>
+    <string name="dynamic_preview_warning">⚠️ Предпросмотр: Это правило заблокирует звонки из следующих стран:</string>
+    <string name="search_placeholder">Поиск номера или заметки...</string>
+    <string name="blocked_numbers_count">Черный список (%1$d записей)</string>
+    <string name="no_blocked_numbers">Нет заблокированных номеров. Нажмите кнопку внизу справа для добавления.</string>
+    <string name="search_no_results">Номера, соответствующие «%1$s», не найдены</string>
+    <string name="btn_add_blocked_number">Заблокировать номер</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Настройки защиты и системы</string>
+    <string name="section_basic_rules">Правила блокировки</string>
+    <string name="rule_block_unknown_title">Блокировать скрытые номера</string>
+    <string name="rule_block_unknown_sub">Автоматически отклонять звонки без Caller ID</string>
+    <string name="rule_block_non_contacts_title">Блокировать не из контактов</string>
+    <string name="rule_block_non_contacts_sub">Разрешать звонки только от номеров из записной книжки</string>
+    <string name="rule_auto_block_rejected_title">Автоматически добавлять отклоненные звонки</string>
+    <string name="rule_auto_block_rejected_sub">Автоматически добавлять отклоненные номера в черный список</string>
+
+    <string name="section_interception_action">Действие при блокировке</string>
+    <string name="action_reject_title">Сбросить вызов (Reject)</string>
+    <string name="action_reject_sub">Мгновенно сбросить звонок от заблокированного абонента.</string>
+    <string name="action_silence_title">Без звука (Silence)</string>
+    <string name="action_silence_sub">Отключить звонок и скрыть вызов без сброса, позволив ему завершиться самому.</string>
+
+    <string name="section_international_protection">Защита от международных звонков</string>
+    <string name="rule_block_international_title">Блокировать международные звонки</string>
+    <string name="rule_block_international_sub">Определять ISO SIM-карты и блокировать звонки из других стран</string>
+
+    <string name="section_language_settings">Настройки языка (App Language)</string>
+    <string name="label_app_language">Выберите язык приложения</string>
+    <string name="label_system_default">Системный по умолчанию</string>
+
+    <string name="section_block_list_management">Управление черным списком</string>
+    <string name="btn_manage_block_list">Управление списком (Маски &amp; E.164)</string>
+    <string name="btn_import_system_block_list">Импортировать черный список Android</string>
+    <string name="btn_export_system_block_list">Синхронизировать список с системой Android</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">Системный черный список</string>
+    <string name="import_source_blocked_contact">Заблокированный контакт</string>
+    <string name="import_source_blocked_contact_with_name">Заблокированный контакт (%1$s)</string>
+    <string name="import_error_empty">Номера не найдены в системном списке или контактах</string>
+    <string name="import_summary_added_and_updated">Успешно добавлено %1$d номеров и обновлено %2$d заметок</string>
+    <string name="import_summary_added_only">Успешно добавлено %1$d заблокированных номеров</string>
+    <string name="import_summary_updated_only">Успешно обновлено %1$d заметок номеров</string>
+    <string name="import_summary_already_latest">Текущий список блокировки уже содержит актуальные данные</string>
+
+    <string name="export_error_empty">Нет заблокированных номеров для экспорта</string>
+    <string name="export_error_failed">Не удалось экспортировать в системный список</string>
+    <string name="export_summary_added">Успешно синхронизировано %1$d номеров с системным списком Android</string>
+    <string name="export_summary_already_exists">Все номера уже существуют в системном списке</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">Для правильной работы требуются разрешения.</string>
+    <string name="toast_cannot_read_phone_number">Не удалось прочитать номер телефона</string>
+    <string name="toast_error">Ошибка: %1$s</string>
+    <string name="toast_backup_created">Резервная копия успешно создана!</string>
+    <string name="toast_restore_success">База данных успешно восстановлена!</string>
+    <string name="toast_dashboard_reset">Панель успешно сброшена!</string>
+    <string name="toast_history_reset">История успешно сброшена!</string>
+    <string name="toast_reset_success">Успешно</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">Пропустить</string>
+    <string name="label_password">Пароль</string>
+    <string name="label_note_format">Заметка: %1$s</string>
+
+    <string name="section_data_management">Управление данными и резервное копирование</string>
+    <string name="btn_reset_dashboard">Сбросить панель защиты</string>
+    <string name="btn_reset_history">Сбросить историю блокировок</string>
+    <string name="btn_create_backup">Создать зашифрованную копию (.spamdb)</string>
+    <string name="btn_restore_database">Восстановить базу данных</string>
+    <string name="btn_reset_database">Сбросить и очистить базу данных</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">Сбросить панель защиты?</string>
+    <string name="dialog_reset_dashboard_message">Это действие навсегда удалит всю статистику панели. Отменить нельзя!</string>
+
+    <string name="dialog_reset_history_title">Сбросить историю блокировок?</string>
+    <string name="dialog_reset_history_message">Это действие навсегда удалит всю историю блокировок. Отменить нельзя!</string>
+
+    <string name="dialog_reset_title">Сбросить и очистить базу данных?</string>
+    <string name="dialog_reset_message">Это действие навсегда удалит все заблокированные номера и историю звонков. Отменить нельзя!</string>
+    <string name="dialog_confirm_reset">Очистить всё</string>
+
+    <string name="dialog_backup_pwd_title">Пароль резервной копии</string>
+    <string name="dialog_backup_pwd_msg">Введите пароль для ключа AES-256. Он потребуется для восстановления.</string>
+    <string name="dialog_restore_pwd_title">Введите пароль расшифровки</string>
+    <string name="dialog_restore_pwd_msg">Введите пароль, использованный при шифровании файла:</string>
+
+    <string name="dialog_dialer_role_title">Заблокированные контакты обработаны!</string>
+    <string name="dialog_dialer_role_processed_count">Успешно обработано %1$d заблокированных номеров.</string>
+    <string name="dialog_dialer_role_unlock_header">💡 Разблокировать остаток системного списка и синхронизировать:</string>
+    <string name="dialog_dialer_role_unlock_msg">Для чтения или записи в системный черный список Android необходимо установить CallBlocker \"Приложением по умолчанию\".</string>
+    <string name="dialog_dialer_role_tip">⚠️ Важно: После обработки вы ДОЛЖНЫ вручную вернуться к своему обычному телефонному приложению в системных настройках (Настройки -&gt; Приложения по умолчанию -&gt; Телефон), иначе вы не сможете нормально принимать звонки!</string>
+    <string name="dialog_dialer_role_confirm">Сделать телефоном по умолчанию</string>
+    <string name="note_auto_blocked">Автоматически добавленный отклоненный звонок</string>
+
+    <string name="btn_cancel">Отмена</string>
+    <string name="btn_confirm">Подтвердить</string>
+    <string name="btn_keep_as_is">Оставить как есть</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">Добро пожаловать в CallBlocker</string>
+    <string name="onboarding_welcome_desc">Ваш главный защитник от спама, телемаркетинга и нежелательных звонков. Мощный, полностью оффлайн и безопасный.</string>
+    <string name="onboarding_privacy_title">Конфиденциальность превыше всего</string>
+    <string name="onboarding_privacy_desc">Нам нужен доступ к вашим контактам и истории звонков для проверки номеров. <b>Все данные на 100% обрабатываются локально на вашем устройстве.</b> Мы никогда не загружаем ваши данные на какие-либо серверы.</string>
+    <string name="onboarding_btn_next">Далее</string>
+
+    <string name="onboarding_permission_title">Требуемые разрешения</string>
+    <string name="onboarding_permission_desc">Для правильной работы CallBlocker требуются следующие разрешения. Пожалуйста, предоставьте их на следующем экране.</string>
+    <string name="onboarding_btn_grant_permissions">Предоставить разрешения</string>
+
+    <string name="onboarding_role_title">Последний шаг: Права на фильтрацию</string>
+    <string name="onboarding_role_desc">Чтобы активно блокировать входящие звонки до того, как ваш телефон зазвонит, необходимо установить CallBlocker приложением для фильтрации вызовов по умолчанию.</string>
+    <string name="onboarding_btn_grant_role">Разрешить и начать</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Оповещения о блокировке вызовов</string>
+    <string name="notification_blocked_title">Звонок перехвачен</string>
+    <string name="notification_blocked_text">Успешно заблокирован звонок от %1$s</string>
+</resources>

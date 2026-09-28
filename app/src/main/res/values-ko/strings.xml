@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">대시보드</string>
+    <string name="tab_history">차단 기록</string>
+    <string name="tab_block_list">차단 목록</string>
+    <string name="tab_settings">설정</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">통화 차단 대시보드</string>
+    <string name="stat_today">오늘 차단</string>
+    <string name="stat_this_month">이번 달 차단</string>
+    <string name="stat_this_year">올해 차단</string>
+    <string name="stat_lifetime">누적 총 차단</string>
+    <string name="reason_breakdown_title">차단 사유 비율 분석</string>
+    <string name="no_records_yet">차단 기록이 없습니다</string>
+    <string name="reason_no_number">발신번호 표시제한</string>
+    <string name="reason_non_contact">연락처 미등록 전화</string>
+    <string name="reason_international">국제 전화</string>
+    <string name="reason_blacklist">사용자 지정 차단 목록</string>
+    <string name="reason_other">기타</string>
+
+    <!-- History Screen -->
+    <string name="history_title">차단 기록</string>
+    <string name="history_clear_all">기록 전체 삭제</string>
+    <string name="history_empty">통화 기록이 없습니다</string>
+    <string name="chip_blocked">차단됨</string>
+    <string name="chip_allowed">수신 허용</string>
+    <string name="chip_silenced">무음 처리됨</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">차단 목록 관리</string>
+    <string name="add_number_section_title">차단 번호 / 와일드카드 추가</string>
+    <string name="input_number_label">전화번호 또는 국번 입력</string>
+    <string name="input_number_placeholder">예: +821012345678 또는 +8210*</string>
+    <string name="input_note_label">메모</string>
+    <string name="input_note_placeholder">예: 스팸 전화</string>
+    <string name="btn_pick_contact">연락처에서 선택</string>
+    <string name="btn_add_to_block_list">차단 목록에 추가</string>
+    <string name="dynamic_preview_warning">⚠️ 실시간 영향 범위 미리보기: 다음 국가의 모든 전화를 차단합니다</string>
+    <string name="search_placeholder">번호 또는 메모 검색...</string>
+    <string name="blocked_numbers_count">차단된 번호 목록 (%1$d 건)</string>
+    <string name="no_blocked_numbers">등록된 차단 번호가 없습니다. 오른쪽 아래 버튼을 눌러 추가하세요.</string>
+    <string name="search_no_results">\"%1$s\"와 일치하는 차단 번호가 없습니다</string>
+    <string name="btn_add_blocked_number">차단 번호 추가</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">보안 및 시스템 설정</string>
+    <string name="section_basic_rules">기본 차단 규칙</string>
+    <string name="rule_block_unknown_title">발신번호 표시제한 전화 차단</string>
+    <string name="rule_block_unknown_sub">발신자 정보가 없는 전화 수신을 자동 거부합니다</string>
+    <string name="rule_block_non_contacts_title">연락처 미등록 전화 차단</string>
+    <string name="rule_block_non_contacts_sub">전화번호부에 저장된 연락처의 전화만 수신 허용합니다</string>
+    <string name="rule_auto_block_rejected_title">거절한 전화 차단 목록에 자동 추가</string>
+    <string name="rule_auto_block_rejected_sub">전화를 거절하거나 차단할 때 해당 번호를 차단 목록에 자동 등록합니다</string>
+
+    <!-- Outgoing Callback Exemption Rule -->
+    <string name="rule_outgoing_exemption_title">최근 발신 전화 회신 허용</string>
+    <string name="rule_outgoing_exemption_sub">최근에 걸었던 전화번호의 회신 통화를 지정 기간 동안 모든 차단 규칙을 무시하고 허용합니다</string>
+    <string name="option_exemption_off">비활성화</string>
+    <string name="option_exemption_1_day">1일 이내</string>
+    <string name="option_exemption_3_days">3일 이내</string>
+    <string name="option_exemption_1_week">1주일 이내</string>
+
+    <string name="section_interception_action">차단 동작 설정</string>
+    <string name="action_reject_title">통화 거절 (Reject)</string>
+    <string name="action_reject_sub">차단 번호 감지 시 즉시 전화를 끊습니다.</string>
+    <string name="action_silence_title">무음 처리 (Silence)</string>
+    <string name="action_silence_sub">전화를 끊지 않고 벨소리를 무음으로 처리하여 상대방이 차단 여부를 알 수 없게 합니다.</string>
+
+    <string name="section_international_protection">국제 전화 보안</string>
+    <string name="rule_block_international_title">국제 전화 자동 차단</string>
+    <string name="rule_block_international_sub">SIM 카드의 국가 코드를 감지하여 해외 발신 전화를 차단합니다</string>
+
+    <string name="section_language_settings">언어 설정 (App Language)</string>
+    <string name="label_app_language">앱 표시 언어 선택</string>
+    <string name="label_system_default">시스템 기본값</string>
+
+    <string name="section_block_list_management">차단 목록 관리</string>
+    <string name="btn_manage_block_list">사용자 지정 차단 목록 관리 (Wildcard &amp; E.164)</string>
+    <string name="btn_import_system_block_list">Android 시스템 차단 목록 가져오기</string>
+    <string name="btn_export_system_block_list">목록을 Android 시스템 차단 목록에 동기화</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">시스템 차단 목록</string>
+    <string name="import_source_blocked_contact">차단된 연락처</string>
+    <string name="import_source_blocked_contact_with_name">차단된 연락처 (%1$s)</string>
+    <string name="import_error_empty">시스템 차단 목록 또는 연락처에서 번호를 찾을 수 없습니다</string>
+    <string name="import_summary_added_and_updated">%1$d개 번호 추가 및 %2$d개 태그 업데이트 완료</string>
+    <string name="import_summary_added_only">%1$d개 차단 번호 추가 완료</string>
+    <string name="import_summary_updated_only">%1$d개 번호 태그 업데이트 완료</string>
+    <string name="import_summary_already_latest">기존 차단 목록이 이미 최신 상태입니다</string>
+
+    <string name="export_error_empty">내보낼 차단 번호가 없습니다</string>
+    <string name="export_error_failed">시스템 차단 목록 내보내기 실패</string>
+    <string name="export_summary_added">%1$d개 번호를 Android 시스템 차단 목록에 동기화했습니다</string>
+    <string name="export_summary_already_exists">모든 번호가 이미 시스템 차단 목록에 존재합니다</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">앱이 제대로 작동하려면 권한이 필요합니다.</string>
+    <string name="toast_cannot_read_phone_number">전화번호를 읽을 수 없습니다</string>
+    <string name="toast_error">오류: %1$s</string>
+    <string name="toast_backup_created">백업이 생성되었습니다!</string>
+    <string name="toast_restore_success">데이터베이스 복원 완료!</string>
+    <string name="toast_dashboard_reset">대시보드 재설정 완료!</string>
+    <string name="toast_history_reset">기록 재설정 완료!</string>
+    <string name="toast_reset_success">성공</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">건너뛰기</string>
+    <string name="label_password">비밀번호</string>
+    <string name="label_note_format">메모: %1$s</string>
+
+    <string name="section_data_management">데이터 관리, 암호화 백업 및 재설정</string>
+    <string name="btn_reset_dashboard">통화 차단 대시보드 재설정</string>
+    <string name="btn_reset_history">수신 차단 기록 재설정</string>
+    <string name="btn_create_backup">암호화 백업 생성 (.spamdb)</string>
+    <string name="btn_restore_database">데이터베이스 복원</string>
+    <string name="btn_reset_database">데이터베이스 초기화 및 삭제</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">통화 차단 대시보드를 재설정하시겠습니까?</string>
+    <string name="dialog_reset_dashboard_message">대시보드의 모든 통계 및 그래프 데이터가 초기화됩니다. 이 작업은 취소할 수 없습니다!</string>
+
+    <string name="dialog_reset_history_title">수신 차단 기록을 재설정하시겠습니까?</string>
+    <string name="dialog_reset_history_message">모든 수신 차단 기록이 삭제됩니다. 이 작업은 취소할 수 없습니다!</string>
+
+    <string name="dialog_reset_title">데이터베이스를 초기화하시겠습니까?</string>
+    <string name="dialog_reset_message">등록된 차단 번호 및 통화 기록이 모두 삭제됩니다. 이 작업은 취소할 수 없습니다!</string>
+    <string name="dialog_confirm_reset">초기화 실행</string>
+
+    <string name="dialog_backup_pwd_title">백업 암호화 비밀번호 설정</string>
+    <string name="dialog_backup_pwd_msg">AES-256 암호화 키를 생성할 비밀번호를 입력하세요. 복원 시 동일한 비밀번호가 필요합니다.</string>
+    <string name="dialog_restore_pwd_title">복호화 비밀번호 입력</string>
+    <string name="dialog_restore_pwd_msg">백업 파일의 암호화 비밀번호를 입력하세요:</string>
+
+    <string name="dialog_dialer_role_title">연락처 차단 목록을 대조했습니다!</string>
+    <string name="dialog_dialer_role_processed_count">%1$d개 차단 번호를 처리했습니다.</string>
+    <string name="dialog_dialer_role_unlock_header">💡 시스템 차단 목록 해제 및 동기화:</string>
+    <string name="dialog_dialer_role_unlock_msg">Android 시스템 정책상 시스템 차단 목록을 읽거나 쓰려면 Call Blocker를 \'기본 전화 앱\'으로 설정해야 합니다.</string>
+    <string name="dialog_dialer_role_tip">⚠️ 중요: 처리 완료 후 반드시 \'설정 -&gt; 기본 앱 -&gt; 전화 앱\'에서 원래 사용하던 전화 앱으로 수동 변경해야 합니다. 그렇지 않으면 일반 전화를 정상 수신하지 못할 수 있습니다!</string>
+    <string name="dialog_dialer_role_confirm">기본 전화 앱으로 설정</string>
+    <string name="note_auto_blocked">자동 차단된 거절 전화</string>
+
+    <string name="btn_cancel">취소</string>
+    <string name="btn_confirm">확인</string>
+    <string name="btn_keep_as_is">현재 상태 유지</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">Call Blocker에 오신 것을 환영합니다</string>
+    <string name="onboarding_welcome_desc">스팸, 텔레마케팅 및 원치 않는 전화로부터 당신을 보호합니다. 완벽한 오프라인 환경에서 안전하게 작동합니다.</string>
+    <string name="onboarding_privacy_title">개인정보 보호 최우선</string>
+    <string name="onboarding_privacy_desc">발신 번호 확인을 위해 연락처 및 통화 기록 접근 권한이 필요합니다. <b>모든 데이터는 기기 내부에서 100% 처리되며</b> 어떠한 서버로도 전송되지 않습니다.</string>
+    <string name="onboarding_btn_next">다음</string>
+
+    <string name="onboarding_permission_title">권한 허용 필요</string>
+    <string name="onboarding_permission_desc">Call Blocker가 정상적으로 작동하려면 다음 화면에서 권한을 허용해 주세요.</string>
+    <string name="onboarding_btn_grant_permissions">권한 허용하기</string>
+
+    <string name="onboarding_role_title">마지막 단계: 통화 필터링 권한</string>
+    <string name="onboarding_role_desc">전화가 울리기 전에 스팸 전화를 자동으로 차단하려면 Call Blocker를 \'기본 통화 필터링 앱\'으로 설정해야 합니다.</string>
+    <string name="onboarding_btn_grant_role">권한 부여 후 시작</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">수신 차단 알림</string>
+    <string name="notification_blocked_title">전화 차단됨</string>
+    <string name="notification_blocked_text">%1$s 번호의 전화를 차단했습니다</string>
+</resources>

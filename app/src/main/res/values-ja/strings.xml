@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">ダッシュボード</string>
+    <string name="tab_history">着信履歴</string>
+    <string name="tab_block_list">ブロックリスト</string>
+    <string name="tab_settings">設定</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">着信拒否ダッシュボード</string>
+    <string name="stat_today">本日の拒否数</string>
+    <string name="stat_this_month">今月の拒否数</string>
+    <string name="stat_this_year">今年の拒否数</string>
+    <string name="stat_lifetime">通算の拒否数</string>
+    <string name="reason_breakdown_title">拒否理由の分析</string>
+    <string name="no_records_yet">ブロック履歴がありません</string>
+    <string name="reason_no_number">非通知・番号なし</string>
+    <string name="reason_non_contact">連絡先外からの着信</string>
+    <string name="reason_international">海外・国際電話</string>
+    <string name="reason_blacklist">カスタムブロックリスト</string>
+    <string name="reason_other">その他</string>
+
+    <!-- History Screen -->
+    <string name="history_title">着信履歴</string>
+    <string name="history_clear_all">履歴を消去</string>
+    <string name="history_empty">着信履歴はありません</string>
+    <string name="chip_blocked">拒否済み</string>
+    <string name="chip_allowed">許可済み</string>
+    <string name="chip_silenced">ミュート済み</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">ブロックリスト管理</string>
+    <string name="add_number_section_title">拒否番号・ワイルドカードの追加</string>
+    <string name="input_number_label">電話番号または市外局番</string>
+    <string name="input_number_placeholder">例: +819012345678 または +8190*</string>
+    <string name="input_note_label">メモ</string>
+    <string name="input_note_placeholder">例: 迷惑電話</string>
+    <string name="btn_pick_contact">連絡先から選択</string>
+    <string name="btn_add_to_block_list">リストに追加</string>
+    <string name="dynamic_preview_warning">⚠️ 影響範囲プレビュー: 以下の国からの着信がブロックされます</string>
+    <string name="search_placeholder">番号やメモを検索...</string>
+    <string name="blocked_numbers_count">拒否番号リスト (%1$d 件)</string>
+    <string name="no_blocked_numbers">登録された番号はありません。右下のボタンから追加してください。</string>
+    <string name="search_no_results">「%1$s」に一致する番号は見つかりません</string>
+    <string name="btn_add_blocked_number">拒否番号を追加</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">セキュリティ・システム設定</string>
+    <string name="section_basic_rules">基本ブロックルール</string>
+    <string name="rule_block_unknown_title">非通知・番号なしを着信拒否</string>
+    <string name="rule_block_unknown_sub">発信者IDのない未知の着信を自動拒否します</string>
+    <string name="rule_block_non_contacts_title">連絡先未登録の電話を拒否</string>
+    <string name="rule_block_non_contacts_sub">電話帳に登録されている連絡先からの着信のみ許可します</string>
+    <string name="rule_auto_block_rejected_title">拒否した番号を自動追加</string>
+    <string name="rule_auto_block_rejected_sub">拒否またはブロックした電話番号を自動的にリストへ追加します</string>
+
+    <!-- Outgoing Callback Exemption Rule -->
+    <string name="rule_outgoing_exemption_title">最近の発信に対する折り返し電話を許可</string>
+    <string name="rule_outgoing_exemption_sub">最近自発的に発信した番号からの着信を一定期間許可し、すべてのブロックルールを免除します</string>
+    <string name="option_exemption_off">無効</string>
+    <string name="option_exemption_1_day">1日以内</string>
+    <string name="option_exemption_3_days">3日以内</string>
+    <string name="option_exemption_1_week">1週間以内</string>
+
+    <string name="section_interception_action">ブロック時の動作</string>
+    <string name="action_reject_title">通話を切断 (Reject)</string>
+    <string name="action_reject_sub">着信を即座に切断します。相手には通話中または拒否の音が流れます。</string>
+    <string name="action_silence_title">ミュートのみ (Silence)</string>
+    <string name="action_silence_sub">通話は切断せず、着信音と画面表示を無効にして自然に切れるのを待ちます。</string>
+
+    <string name="section_international_protection">国際電話セキュリティ</string>
+    <string name="rule_block_international_title">海外からの電話を自動拒否</string>
+    <string name="rule_block_international_sub">SIMカードの国コードを検出し、国外からの着信を拒否します</string>
+
+    <string name="section_language_settings">言語設定 (App Language)</string>
+    <string name="label_app_language">アプリの表示言語を選択</string>
+    <string name="label_system_default">システムデフォルト</string>
+
+    <string name="section_block_list_management">ブロックリスト管理</string>
+    <string name="btn_manage_block_list">カスタムブロックリストの管理 (Wildcard &amp; E.164)</string>
+    <string name="btn_import_system_block_list">Androidシステムの拒否リストをインポート</string>
+    <string name="btn_export_system_block_list">リストをAndroidシステム拒否リストに同期</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">システム拒否リスト</string>
+    <string name="import_source_blocked_contact">ブロックされた連絡先</string>
+    <string name="import_source_blocked_contact_with_name">ブロックされた連絡先 (%1$s)</string>
+    <string name="import_error_empty">システム拒否リストまたは連絡先に番号が見つかりません</string>
+    <string name="import_summary_added_and_updated">%1$d 件を追加し、%2$d 件のタグを更新しました</string>
+    <string name="import_summary_added_only">%1$d 件の拒否番号を追加しました</string>
+    <string name="import_summary_updated_only">%1$d 件の番号タグを更新しました</string>
+    <string name="import_summary_already_latest">既存のブロックリストは最新です</string>
+
+    <string name="export_error_empty">エクスポートする拒否番号がありません</string>
+    <string name="export_error_failed">システム拒否リストへの同期に失敗しました</string>
+    <string name="export_summary_added">%1$d 件の番号をAndroidシステム拒否リストに同期しました</string>
+    <string name="export_summary_already_exists">すべての番号はすでにシステム拒否リストに存在します</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">権限が必要です。</string>
+    <string name="toast_cannot_read_phone_number">電話番号を読み取れません</string>
+    <string name="toast_error">エラー: %1$s</string>
+    <string name="toast_backup_created">バックアップを作成しました！</string>
+    <string name="toast_restore_success">データベースを復元しました！</string>
+    <string name="toast_dashboard_reset">ダッシュボードをリセットしました！</string>
+    <string name="toast_history_reset">履歴をリセットしました！</string>
+    <string name="toast_reset_success">成功</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">スキップ</string>
+    <string name="label_password">パスワード</string>
+    <string name="label_note_format">メモ: %1$s</string>
+
+    <string name="section_data_management">データ管理・バックアップ・リセット</string>
+    <string name="btn_reset_dashboard">着信拒否ダッシュボードのリセット</string>
+    <string name="btn_reset_history">着信履歴のリセット</string>
+    <string name="btn_create_backup">暗号化バックアップを作成 (.spamdb)</string>
+    <string name="btn_restore_database">データベースを復元</string>
+    <string name="btn_reset_database">データベースを初期化・消去</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">着信拒否ダッシュボードをリセットしますか？</string>
+    <string name="dialog_reset_dashboard_message">すべてのダッシュボード統計データとグラフがリセットされます。この操作は取り消せません！</string>
+
+    <string name="dialog_reset_history_title">着信履歴をリセットしますか？</string>
+    <string name="dialog_reset_history_message">すべての着信履歴データが消去されます。この操作は取り消せません！</string>
+
+    <string name="dialog_reset_title">データベースを初期化しますか？</string>
+    <string name="dialog_reset_message">登録された拒否番号および着信履歴がすべて削除されます。この操作は取り消せません。</string>
+    <string name="dialog_confirm_reset">初期化を実行</string>
+
+    <string name="dialog_backup_pwd_title">バックアップ暗号化パスワードを設定</string>
+    <string name="dialog_backup_pwd_msg">AES-256暗号化キーを生成するためのパスワードを入力してください。復元時に同じパスワードが必要です。</string>
+    <string name="dialog_restore_pwd_title">復号パスワードを入力</string>
+    <string name="dialog_restore_pwd_msg">バックアップファイルの設定済みパスワードを入力してください:</string>
+
+    <string name="dialog_dialer_role_title">連絡先の拒否リストを照合しました！</string>
+    <string name="dialog_dialer_role_processed_count">%1$d 件の拒否番号を処理しました。</string>
+    <string name="dialog_dialer_role_unlock_header">💡 システム拒否リストの解除と同期：</string>
+    <string name="dialog_dialer_role_unlock_msg">Androidシステムの仕様により、システムの拒否リストの読み書きには「デフォルトの電話アプリ」への設定が必要です。</string>
+    <string name="dialog_dialer_role_tip">⚠️ 重要：同期完了後、必ず「設定 -&gt; デフォルトアプリ -&gt; 電話アプリ」から普段の電話アプリに手動で戻してください。そうしないと通常の着信を受け取れない場合があります！</string>
+    <string name="dialog_dialer_role_confirm">デフォルトの電話アプリに設定</string>
+    <string name="note_auto_blocked">自動拒否された電話</string>
+
+    <string name="btn_cancel">キャンセル</string>
+    <string name="btn_confirm">確認</string>
+    <string name="btn_keep_as_is">現状維持</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">Call Blockerへようこそ</string>
+    <string name="onboarding_welcome_desc">迷惑電話やセールス電話を強力にブロックするオフライン特化の着信拒否アプリです。あなたのプライバシーを完全に守ります。</string>
+    <string name="onboarding_privacy_title">プライバシーを最優先に</string>
+    <string name="onboarding_privacy_desc">着信番号の判定のために連絡先と通話履歴へのアクセスが必要です。<b>データは100%デバイス内で処理され</b>、外部サーバーに送信されることは絶対にありません。</string>
+    <string name="onboarding_btn_next">次へ</string>
+
+    <string name="onboarding_permission_title">権限の許可が必要です</string>
+    <string name="onboarding_permission_desc">Call Blockerが正常に動作するためには以下の権限が必要です。次の画面で許可してください。</string>
+    <string name="onboarding_btn_grant_permissions">権限を許可する</string>
+
+    <string name="onboarding_role_title">最後のステップ：着信スクリーニング設定</string>
+    <string name="onboarding_role_desc">電話が鳴る前に着信を自動ブロックするためには、Call Blockerを「デフォルトの着信スクリーニングアプリ」に設定する必要があります。</string>
+    <string name="onboarding_btn_grant_role">設定して開始する</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">着信拒否の通知</string>
+    <string name="notification_blocked_title">着信をブロックしました</string>
+    <string name="notification_blocked_text">%1$s からの着信を拒否しました</string>
+</resources>

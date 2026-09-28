@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">Bảng điều khiển</string>
+    <string name="tab_history">Lịch sử</string>
+    <string name="tab_block_list">Danh sách chặn</string>
+    <string name="tab_settings">Cài đặt</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Bảng bảo vệ cuộc gọi</string>
+    <string name="stat_today">Đã chặn hôm nay</string>
+    <string name="stat_this_month">Đã chặn tháng này</string>
+    <string name="stat_this_year">Đã chặn năm nay</string>
+    <string name="stat_lifetime">Tổng số đã chặn</string>
+    <string name="reason_breakdown_title">Phân tích lý do chặn</string>
+    <string name="no_records_yet">Chưa có cuộc gọi bị chặn nào</string>
+    <string name="reason_no_number">Số ẩn / Không hiển thị</string>
+    <string name="reason_non_contact">Cuộc gọi ngoài danh bạ</string>
+    <string name="reason_international">Cuộc gọi quốc tế</string>
+    <string name="reason_blacklist">Danh sách chặn tùy chỉnh</string>
+    <string name="reason_other">Khác</string>
+
+    <!-- History Screen -->
+    <string name="history_title">Lịch sử chặn cuộc gọi</string>
+    <string name="history_clear_all">Xóa lịch sử</string>
+    <string name="history_empty">Không tìm thấy lịch sử cuộc gọi</string>
+    <string name="chip_blocked">Đã chặn</string>
+    <string name="chip_allowed">Được phép</string>
+    <string name="chip_silenced">Đã tắt tiếng</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">Quản lý danh sách chặn</string>
+    <string name="add_number_section_title">Thêm số chặn / Ký tự đại diện</string>
+    <string name="input_number_label">Nhập số hoặc tiền tố</string>
+    <string name="input_number_placeholder">ví dụ: +886912345678 hoặc +886912*</string>
+    <string name="input_note_label">Ghi chú</string>
+    <string name="input_note_placeholder">ví dụ: Quảng cáo</string>
+    <string name="btn_pick_contact">Chọn từ danh bạ</string>
+    <string name="btn_add_to_block_list">Thêm vào danh sách chặn</string>
+    <string name="dynamic_preview_warning">⚠️ Xem trước tác động: Quy tắc này sẽ chặn tất cả cuộc gọi từ các quốc gia sau:</string>
+    <string name="search_placeholder">Tìm kiếm số hoặc ghi chú...</string>
+    <string name="blocked_numbers_count">Danh sách chặn (%1$d mục)</string>
+    <string name="no_blocked_numbers">Chưa có số nào bị chặn. Nhấn nút bên dưới để thêm.</string>
+    <string name="search_no_results">Không tìm thấy số nào khớp với \"%1$s\"</string>
+    <string name="btn_add_blocked_number">Thêm số chặn</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Bảo vệ &amp; Cài đặt hệ thống</string>
+    <string name="section_basic_rules">Quy tắc chặn</string>
+    <string name="rule_block_unknown_title">Chặn số ẩn / Không danh tính</string>
+    <string name="rule_block_unknown_sub">Tự động từ chối cuộc gọi không có ID người gọi</string>
+    <string name="rule_block_non_contacts_title">Chặn số ngoài danh bạ</string>
+    <string name="rule_block_non_contacts_sub">Chỉ cho phép cuộc gọi từ các số có trong danh bạ</string>
+    <string name="rule_auto_block_rejected_title">Tự động thêm cuộc gọi bị từ chối</string>
+    <string name="rule_auto_block_rejected_sub">Tự động thêm các số bị từ chối vào danh sách chặn</string>
+
+    <string name="section_interception_action">Hành động chặn</string>
+    <string name="action_reject_title">Từ chối cuộc gọi (Cúp máy)</string>
+    <string name="action_reject_sub">Lập tức ngắt kết nối cuộc gọi bị chặn.</string>
+    <string name="action_silence_title">Tắt tiếng cuộc gọi (Bỏ qua)</string>
+    <string name="action_silence_sub">Tắt tiếng chuông và ẩn cuộc gọi mà không cúp máy, để cuộc gọi tự đổ chuông.</string>
+
+    <string name="section_international_protection">Bảo vệ cuộc gọi quốc tế</string>
+    <string name="rule_block_international_title">Tự động chặn cuộc gọi quốc tế</string>
+    <string name="rule_block_international_sub">Phát hiện ISO thẻ SIM và chặn cuộc gọi ngoài quốc gia SIM</string>
+
+    <string name="section_language_settings">Cài đặt ngôn ngữ (App Language)</string>
+    <string name="label_app_language">Chọn ngôn ngữ ứng dụng</string>
+    <string name="label_system_default">Mặc định hệ thống</string>
+
+    <string name="section_block_list_management">Quản lý danh sách chặn</string>
+    <string name="btn_manage_block_list">Quản lý danh sách tùy chỉnh (Ký tự đại diện &amp; E.164)</string>
+    <string name="btn_import_system_block_list">Nhập danh sách chặn từ hệ thống Android</string>
+    <string name="btn_export_system_block_list">Đồng bộ danh sách sang hệ thống Android</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">Danh sách chặn hệ thống</string>
+    <string name="import_source_blocked_contact">Liên hệ bị chặn</string>
+    <string name="import_source_blocked_contact_with_name">Liên hệ bị chặn (%1$s)</string>
+    <string name="import_error_empty">Không tìm thấy số trong danh sách hệ thống hoặc danh bạ</string>
+    <string name="import_summary_added_and_updated">Đã thêm %1$d số và cập nhật %2$d ghi chú thành công</string>
+    <string name="import_summary_added_only">Đã thêm thành công %1$d số bị chặn</string>
+    <string name="import_summary_updated_only">Đã cập nhật %1$d ghi chú số thành công</string>
+    <string name="import_summary_already_latest">Danh sách chặn hiện tại đã là mới nhất</string>
+
+    <string name="export_error_empty">Không có số bị chặn tùy chỉnh để xuất</string>
+    <string name="export_error_failed">Xuất sang danh sách hệ thống thất bại</string>
+    <string name="export_summary_added">Đã đồng bộ thành công %1$d số sang danh sách hệ thống Android</string>
+    <string name="export_summary_already_exists">Tất cả các số đã tồn tại trong danh sách hệ thống</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">Cần có các quyền để ứng dụng hoạt động bình thường.</string>
+    <string name="toast_cannot_read_phone_number">Không thể đọc số điện thoại</string>
+    <string name="toast_error">Lỗi: %1$s</string>
+    <string name="toast_backup_created">Tạo bản sao lưu thành công!</string>
+    <string name="toast_restore_success">Khôi phục cơ sở dữ liệu thành công!</string>
+    <string name="toast_dashboard_reset">Đã đặt lại bảng điều khiển!</string>
+    <string name="toast_history_reset">Đã đặt lại lịch sử!</string>
+    <string name="toast_reset_success">Thành công</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">Bỏ qua lúc này</string>
+    <string name="label_password">Mật khẩu</string>
+    <string name="label_note_format">Ghi chú: %1$s</string>
+
+    <string name="section_data_management">Quản lý dữ liệu &amp; Sao lưu</string>
+    <string name="btn_reset_dashboard">Đặt lại bảng điều khiển bảo vệ</string>
+    <string name="btn_reset_history">Đặt lại lịch sử chặn</string>
+    <string name="btn_create_backup">Tạo bản sao lưu mã hóa (.spamdb)</string>
+    <string name="btn_restore_database">Khôi phục cơ sở dữ liệu</string>
+    <string name="btn_reset_database">Đặt lại &amp; Xóa cơ sở dữ liệu</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">Đặt lại bảng điều khiển bảo vệ?</string>
+    <string name="dialog_reset_dashboard_message">Hành động này sẽ xóa vĩnh viễn tất cả thống kê trên bảng điều khiển. Không thể hoàn tác!</string>
+
+    <string name="dialog_reset_history_title">Đặt lại lịch sử chặn?</string>
+    <string name="dialog_reset_history_message">Hành động này sẽ xóa vĩnh viễn tất cả lịch sử cuộc gọi bị chặn. Không thể hoàn tác!</string>
+
+    <string name="dialog_reset_title">Đặt lại và xóa cơ sở dữ liệu?</string>
+    <string name="dialog_reset_message">Hành động này sẽ xóa vĩnh viễn tất cả các số bị chặn và lịch sử cuộc gọi. Không thể hoàn tác!</string>
+    <string name="dialog_confirm_reset">Xóa tất cả</string>
+
+    <string name="dialog_backup_pwd_title">Đặt mật khẩu mã hóa sao lưu</string>
+    <string name="dialog_backup_pwd_msg">Nhập mật khẩu cho khóa AES-256. Mật khẩu tương tự sẽ được yêu cầu khi khôi phục.</string>
+    <string name="dialog_restore_pwd_title">Nhập mật khẩu giải mã</string>
+    <string name="dialog_restore_pwd_msg">Nhập mật khẩu đã dùng để mã hóa tệp sao lưu này:</string>
+
+    <string name="dialog_dialer_role_title">Đã xử lý danh bạ bị chặn!</string>
+    <string name="dialog_dialer_role_processed_count">Đã xử lý thành công %1$d số bị chặn.</string>
+    <string name="dialog_dialer_role_unlock_header">💡 Mở khóa danh sách hệ thống còn lại và đồng bộ:</string>
+    <string name="dialog_dialer_role_unlock_msg">Để đọc hoặc ghi vào danh sách chặn hệ thống Android, quy định hệ thống yêu cầu đặt CallBlocker làm \"Ứng dụng điện thoại mặc định\".</string>
+    <string name="dialog_dialer_role_tip">⚠️ Quan trọng: Sau khi xử lý, bạn PHẢI tự chuyển lại ứng dụng điện thoại ban đầu trong cài đặt hệ thống (Cài đặt -&gt; Ứng dụng mặc định -&gt; Ứng dụng điện thoại), nếu không bạn có thể không nhận được cuộc gọi bình thường!</string>
+    <string name="dialog_dialer_role_confirm">Đặt làm Ứng dụng Điện thoại Mặc định</string>
+    <string name="note_auto_blocked">Tự động thêm cuộc gọi bị từ chối</string>
+
+    <string name="btn_cancel">Hủy</string>
+    <string name="btn_confirm">Xác nhận</string>
+    <string name="btn_keep_as_is">Giữ nguyên</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">Chào mừng đến với CallBlocker</string>
+    <string name="onboarding_welcome_desc">Vệ sĩ bảo mật tối thượng của bạn chống lại thư rác, tiếp thị qua điện thoại và các cuộc gọi không mong muốn. Mạnh mẽ, hoàn toàn ngoại tuyến và an toàn.</string>
+    <string name="onboarding_privacy_title">Quyền riêng tư của bạn là trên hết</string>
+    <string name="onboarding_privacy_desc">Chúng tôi yêu cầu quyền truy cập vào Danh bạ và Lịch sử cuộc gọi của bạn để khớp với số gọi đến. <b>Tất cả dữ liệu được xử lý 100% cục bộ trên thiết bị của bạn.</b> Chúng tôi không bao giờ tải dữ liệu của bạn lên bất kỳ máy chủ nào.</string>
+    <string name="onboarding_btn_next">Tiếp theo</string>
+
+    <string name="onboarding_permission_title">Quyền bắt buộc</string>
+    <string name="onboarding_permission_desc">CallBlocker cần các quyền sau để hoạt động bình thường. Vui lòng cấp quyền ở bước tiếp theo.</string>
+    <string name="onboarding_btn_grant_permissions">Cấp quyền</string>
+
+    <string name="onboarding_role_title">Bước cuối cùng: Vai trò sàng lọc cuộc gọi</string>
+    <string name="onboarding_role_desc">Để chủ động chặn các cuộc gọi đến trước khi điện thoại đổ chuông, CallBlocker cần được đặt làm ứng dụng Sàng lọc cuộc gọi mặc định.</string>
+    <string name="onboarding_btn_grant_role">Cấp vai trò &amp; Bắt đầu</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Cảnh báo chặn cuộc gọi</string>
+    <string name="notification_blocked_title">Cuộc gọi đã bị chặn</string>
+    <string name="notification_blocked_text">Đã chặn thành công cuộc gọi từ %1$s</string>
+</resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">แดชบอร์ด</string>
+    <string name="tab_history">ประวัติ</string>
+    <string name="tab_block_list">รายการบล็อก</string>
+    <string name="tab_settings">การตั้งค่า</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">แดชบอร์ดป้องกันการโทร</string>
+    <string name="stat_today">บล็อกวันนี้</string>
+    <string name="stat_this_month">บล็อกเดือนนี้</string>
+    <string name="stat_this_year">บล็อกปีนี้</string>
+    <string name="stat_lifetime">บล็อกทั้งหมด</string>
+    <string name="reason_breakdown_title">วิเคราะห์เหตุผลการบล็อก</string>
+    <string name="no_records_yet">ยังไม่มีประวัติการบล็อก</string>
+    <string name="reason_no_number">ไม่แสดงหมายเลข / เบอร์ซ่อน</string>
+    <string name="reason_non_contact">ไม่อยู่ในรายชื่อผู้ติดต่อ</string>
+    <string name="reason_international">สายต่างประเทศ</string>
+    <string name="reason_blacklist">รายการบล็อกกำหนดเอง</string>
+    <string name="reason_other">อื่นๆ</string>
+
+    <!-- History Screen -->
+    <string name="history_title">ประวัติการบล็อก</string>
+    <string name="history_clear_all">ล้างประวัติ</string>
+    <string name="history_empty">ไม่พบประวัติการโทร</string>
+    <string name="chip_blocked">บล็อกแล้ว</string>
+    <string name="chip_allowed">อนุญาต</string>
+    <string name="chip_silenced">ปิดเสียง</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">จัดการรายการบล็อก</string>
+    <string name="add_number_section_title">เพิ่มเบอร์บล็อก / ไวการ์ด</string>
+    <string name="input_number_label">กรอกเบอร์หรือรหัสทางไกล</string>
+    <string name="input_number_placeholder">เช่น +886912345678 หรือ +886912*</string>
+    <string name="input_note_label">บันทึก</string>
+    <string name="input_note_placeholder">เช่น ขายประกัน</string>
+    <string name="btn_pick_contact">เลือกจากรายชื่อ</string>
+    <string name="btn_add_to_block_list">เพิ่มในรายการบล็อก</string>
+    <string name="dynamic_preview_warning">⚠️ ตัวอย่างผลกระทบ: กฎนี้จะบล็อกการโทรจากประเทศต่อไปนี้:</string>
+    <string name="search_placeholder">ค้นหาเบอร์หรือบันทึก...</string>
+    <string name="blocked_numbers_count">รายการบล็อก (%1$d รายการ)</string>
+    <string name="no_blocked_numbers">ไม่มีเบอร์ที่ถูกบล็อก กดปุ่มขวาใต้เพื่อเพิ่ม</string>
+    <string name="search_no_results">ไม่พบเบอร์ที่ตรงกับ \"%1$s\"</string>
+    <string name="btn_add_blocked_number">เพิ่มเบอร์บล็อก</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">การตั้งค่าการป้องกันและระบบ</string>
+    <string name="section_basic_rules">กฎการบล็อก</string>
+    <string name="rule_block_unknown_title">บล็อกเบอร์ไม่แสดงผู้โทร</string>
+    <string name="rule_block_unknown_sub">ปฏิเสธสายที่ไม่แสดง ID ผู้โทรโดยอัตโนมัติ</string>
+    <string name="rule_block_non_contacts_title">บล็อกเบอร์ไม่อยู่ในรายชื่อ</string>
+    <string name="rule_block_non_contacts_sub">อนุญาตเฉพาะเบอร์ที่บันทึกในสมุดโทรศัพท์</string>
+    <string name="rule_auto_block_rejected_title">เพิ่มเบอร์ที่ปฏิเสธเข้าบล็อกอัตโนมัติ</string>
+    <string name="rule_auto_block_rejected_sub">เพิ่มเบอร์ที่ปฏิเสธเข้า รายการบล็อก อัตโนมัติ</string>
+
+    <string name="section_interception_action">การดำเนินการเมื่อบล็อก</string>
+    <string name="action_reject_title">ปฏิเสธสาย (วางสายทันที)</string>
+    <string name="action_reject_sub">ตัดสายผู้โทรที่ถูกบล็อกทันที</string>
+    <string name="action_silence_title">ปิดเสียง (ละเว้น)</string>
+    <string name="action_silence_sub">ปิดเสียงเรียกเข้าและซ่อนสายเรียกเข้าโดยไม่วางสาย ปล่อยให้สายตัดไปเอง</string>
+
+    <string name="section_international_protection">การป้องกันสายต่างประเทศ</string>
+    <string name="rule_block_international_title">บล็อกสายต่างประเทศอัตโนมัติ</string>
+    <string name="rule_block_international_sub">ตรวจจับรหัสประเทศ SIM และบล็อกการโทรจากต่างประเทศ</string>
+
+    <string name="section_language_settings">การตั้งค่าภาษา (App Language)</string>
+    <string name="label_app_language">เลือกภาษาของแอป</string>
+    <string name="label_system_default">ค่าเริ่มต้นของระบบ</string>
+
+    <string name="section_block_list_management">จัดการรายการบล็อก</string>
+    <string name="btn_manage_block_list">จัดการรายการกำหนดเอง (Wildcard &amp; E.164)</string>
+    <string name="btn_import_system_block_list">นำเข้ารายการบล็อกระบบ Android</string>
+    <string name="btn_export_system_block_list">ซิงค์รายการไปยังรายการบล็อกระบบ Android</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">รายการบล็อกระบบ</string>
+    <string name="import_source_blocked_contact">ผู้ติดต่อที่ถูกบล็อก</string>
+    <string name="import_source_blocked_contact_with_name">ผู้ติดต่อที่ถูกบล็อก (%1$s)</string>
+    <string name="import_error_empty">ไม่พบเบอร์ในรายการบล็อกระบบหรือผู้ติดต่อ</string>
+    <string name="import_summary_added_and_updated">เพิ่ม %1$d เบอร์และอัปเดตบันทึก %2$d รายการสำเร็จ</string>
+    <string name="import_summary_added_only">เพิ่มเบอร์บล็อก %1$d รายการสำเร็จ</string>
+    <string name="import_summary_updated_only">อัปเดตบันทึกเบอร์ %1$d รายการสำเร็จ</string>
+    <string name="import_summary_already_latest">รายการบล็อกปัจจุบันเป็นข้อมูลล่าสุดแล้ว</string>
+
+    <string name="export_error_empty">ไม่มีเบอร์บล็อกสำหรับส่งออก</string>
+    <string name="export_error_failed">ล้มเหลวในการส่งออกไปยังรายการบล็อกระบบ</string>
+    <string name="export_summary_added">ซิงค์เบอร์ %1$d รายการไปยังรายการบล็อกระบบ Android สำเร็จ</string>
+    <string name="export_summary_already_exists">ทุกเบอร์มีอยู่ในรายการบล็อกระบบแล้ว</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">จำเป็นต้องได้รับสิทธิ์เพื่อให้ทำงานได้อย่างถูกต้อง</string>
+    <string name="toast_cannot_read_phone_number">ไม่สามารถอ่านหมายเลขโทรศัพท์ได้</string>
+    <string name="toast_error">ข้อผิดพลาด: %1$s</string>
+    <string name="toast_backup_created">สร้างไฟล์สำรองข้อมูลสำเร็จ!</string>
+    <string name="toast_restore_success">คืนค่าฐานข้อมูลสำเร็จ!</string>
+    <string name="toast_dashboard_reset">รีเซ็ตแดชบอร์ดสำเร็จ!</string>
+    <string name="toast_history_reset">รีเซ็ตประวัติสำเร็จ!</string>
+    <string name="toast_reset_success">สำเร็จ</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">ข้ามไปก่อน</string>
+    <string name="label_password">รหัสผ่าน</string>
+    <string name="label_note_format">บันทึก: %1$s</string>
+
+    <string name="section_data_management">จัดการข้อมูลและสำรองข้อมูล</string>
+    <string name="btn_reset_dashboard">รีเซ็ตแดชบอร์ดป้องกัน</string>
+    <string name="btn_reset_history">รีเซ็ตประวัติการบล็อก</string>
+    <string name="btn_create_backup">สร้างไฟล์สำรองเข้ารหัส (.spamdb)</string>
+    <string name="btn_restore_database">คืนค่าฐานข้อมูล</string>
+    <string name="btn_reset_database">รีเซ็ตและล้างฐานข้อมูล</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">รีเซ็ตแดชบอร์ดป้องกันหรือไม่?</string>
+    <string name="dialog_reset_dashboard_message">การดำเนินการนี้จะลบสถิติแดชบอร์ดทั้งหมดอย่างถาวร ไม่สามารถยกเลิกได้!</string>
+
+    <string name="dialog_reset_history_title">รีเซ็ตประวัติการบล็อกหรือไม่?</string>
+    <string name="dialog_reset_history_message">การดำเนินการนี้จะลบประวัติการบล็อกทั้งหมดอย่างถาวร ไม่สามารถยกเลิกได้!</string>
+
+    <string name="dialog_reset_title">รีเซ็ตและล้างฐานข้อมูลหรือไม่?</string>
+    <string name="dialog_reset_message">การดำเนินการนี้จะลบรายการบล็อกและประวัติทั้งหมดอย่างถาวร ไม่สามารถยกเลิกได้!</string>
+    <string name="dialog_confirm_reset">ล้างทั้งหมด</string>
+
+    <string name="dialog_backup_pwd_title">ตั้งรหัสผ่านสำรองข้อมูล</string>
+    <string name="dialog_backup_pwd_msg">กรอกรหัสผ่านสำหรับคีย์ AES-256 ต้องใช้รหัสผ่านเดียวกันเมื่อคืนค่า</string>
+    <string name="dialog_restore_pwd_title">กรอกรหัสผ่านถอดรหัส</string>
+    <string name="dialog_restore_pwd_msg">กรอกรหัสผ่านที่ใช้เข้ารหัสไฟล์นี้:</string>
+
+    <string name="dialog_dialer_role_title">ประมวลผลรายชื่อที่บล็อกแล้ว!</string>
+    <string name="dialog_dialer_role_processed_count">ประมวลผลเบอร์บล็อก %1$d รายการสำเร็จ</string>
+    <string name="dialog_dialer_role_unlock_header">💡 ปลดล็อกส่วนที่เหลือและซิงค์กับระบบ:</string>
+    <string name="dialog_dialer_role_unlock_msg">เพื่ออ่านหรือเขียนรายการบล็อกของระบบ Android จำเป็นต้องตั้ง CallBlocker เป็น \"แอปโทรเริ่มต้น\"</string>
+    <string name="dialog_dialer_role_tip">⚠️ สำคัญ: หลังเสร็จสิ้น คุณต้องสลับกลับเป็นแอปโทรเดิมในตั้งค่าระบบ (การตั้งค่า -&gt; แอปเริ่มต้น -&gt; แอปโทร) ด้วยตนเอง มิฉะนั้นอาจไม่สามารถรับสายได้ตามปกติ!</string>
+    <string name="dialog_dialer_role_confirm">ตั้งเป็นแอปโทรเริ่มต้น</string>
+    <string name="note_auto_blocked">เพิ่มเบอร์ที่ปฏิเสธเข้าบล็อกอัตโนมัติ</string>
+
+    <string name="btn_cancel">ยกเลิก</string>
+    <string name="btn_confirm">ยืนยัน</string>
+    <string name="btn_keep_as_is">คงเดิม</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">ยินดีต้อนรับสู่ CallBlocker</string>
+    <string name="onboarding_welcome_desc">ผู้พิทักษ์ความเป็นส่วนตัวของคุณจากสแปม การตลาดทางโทรศัพท์ และสายที่ไม่ต้องการ ทรงพลัง ทำงานออฟไลน์สมบูรณ์แบบ และปลอดภัย</string>
+    <string name="onboarding_privacy_title">ความเป็นส่วนตัวของคุณต้องมาก่อน</string>
+    <string name="onboarding_privacy_desc">เราจำเป็นต้องเข้าถึงรายชื่อผู้ติดต่อและประวัติการโทรของคุณเพื่อตรวจสอบหมายเลขที่โทรเข้ามา <b>ข้อมูลทั้งหมดจะถูกประมวลผล 100% ภายในอุปกรณ์ของคุณ</b> เราไม่เคยอัปโหลดข้อมูลของคุณไปยังเซิร์ฟเวอร์ใดๆ</string>
+    <string name="onboarding_btn_next">ถัดไป</string>
+
+    <string name="onboarding_permission_title">สิทธิ์ที่จำเป็น</string>
+    <string name="onboarding_permission_desc">CallBlocker ต้องการสิทธิ์ต่อไปนี้เพื่อให้ทำงานได้อย่างถูกต้อง โปรดอนุญาตในหน้าต่างถัดไป</string>
+    <string name="onboarding_btn_grant_permissions">อนุญาตสิทธิ์</string>
+
+    <string name="onboarding_role_title">ขั้นตอนสุดท้าย: สิทธิ์การคัดกรองการโทร</string>
+    <string name="onboarding_role_desc">เพื่อบล็อกสายเรียกเข้าอย่างมีประสิทธิภาพก่อนที่โทรศัพท์จะดัง CallBlocker จำเป็นต้องถูกตั้งค่าเป็นแอปคัดกรองการโทรเริ่มต้น</string>
+    <string name="onboarding_btn_grant_role">ให้สิทธิ์และเริ่มต้น</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">แจ้งเตือนสกัดกั้นการโทร</string>
+    <string name="notification_blocked_title">สกัดกั้นการโทรแล้ว</string>
+    <string name="notification_blocked_text">บล็อกการโทรจาก %1$s สำเร็จแล้ว</string>
+</resources>

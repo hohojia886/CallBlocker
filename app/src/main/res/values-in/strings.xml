@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">Dasbor</string>
+    <string name="tab_history">Riwayat</string>
+    <string name="tab_block_list">Daftar Blokir</string>
+    <string name="tab_settings">Pengaturan</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Dasbor Perlindungan Panggilan</string>
+    <string name="stat_today">Diblokir Hari Ini</string>
+    <string name="stat_this_month">Diblokir Bulan Ini</string>
+    <string name="stat_this_year">Diblokir Tahun Ini</string>
+    <string name="stat_lifetime">Total Diblokir</string>
+    <string name="reason_breakdown_title">Analisis Alasan Pemblokiran</string>
+    <string name="no_records_yet">Belum ada panggilan diblokir</string>
+    <string name="reason_no_number">Nomor Privat / Tersembunyi</string>
+    <string name="reason_non_contact">Panggilan Luar Kontak</string>
+    <string name="reason_international">Panggilan Internasional</string>
+    <string name="reason_blacklist">Daftar Blokir Kustom</string>
+    <string name="reason_other">Lainnya</string>
+
+    <!-- History Screen -->
+    <string name="history_title">Riwayat Pemblokiran</string>
+    <string name="history_clear_all">Hapus Riwayat</string>
+    <string name="history_empty">Tidak ada riwayat panggilan ditemukan</string>
+    <string name="chip_blocked">Diblokir</string>
+    <string name="chip_allowed">Diizinkan</string>
+    <string name="chip_silenced">Dibisukan</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">Manajemen Daftar Blokir</string>
+    <string name="add_number_section_title">Tambah Nomor Blokir / Wildcard</string>
+    <string name="input_number_label">Masukkan Nomor atau Awalan</string>
+    <string name="input_number_placeholder">cth. +886912345678 atau +886912*</string>
+    <string name="input_note_label">Catatan</string>
+    <string name="input_note_placeholder">cth. Telemarketing</string>
+    <string name="btn_pick_contact">Pilih dari Kontak</string>
+    <string name="btn_add_to_block_list">Tambah ke Daftar Blokir</string>
+    <string name="dynamic_preview_warning">⚠️ Pratinjau Dampak: Aturan ini akan memblokir semua panggilan dari negara berikut:</string>
+    <string name="search_placeholder">Cari nomor atau catatan...</string>
+    <string name="blocked_numbers_count">Daftar Blokir (%1$d item)</string>
+    <string name="no_blocked_numbers">Belum ada nomor diblokir. Ketuk tombol kanan bawah untuk menambah.</string>
+    <string name="search_no_results">Tidak ada nomor cocok dengan \"%1$s\"</string>
+    <string name="btn_add_blocked_number">Tambah Nomor Blokir</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Pengaturan Perlindungan &amp; Sistem</string>
+    <string name="section_basic_rules">Aturan Pemblokiran</string>
+    <string name="rule_block_unknown_title">Blokir Nomor Privat / Tersembunyi</string>
+    <string name="rule_block_unknown_sub">Tolak panggilan masuk tanpa ID Pemanggil secara otomatis</string>
+    <string name="rule_block_non_contacts_title">Blokir Luar Kontak</string>
+    <string name="rule_block_non_contacts_sub">Hanya izinkan panggilan dari kontak yang tersimpan</string>
+    <string name="rule_auto_block_rejected_title">Otomatis Tambah Panggilan Ditolak</string>
+    <string name="rule_auto_block_rejected_sub">Otomatis tambahkan nomor yang ditolak ke daftar blokir</string>
+
+    <string name="section_interception_action">Tindakan Pemblokiran</string>
+    <string name="action_reject_title">Tolak Panggilan (Tutup)</string>
+    <string name="action_reject_sub">Seketika memutuskan panggilan yang diblokir.</string>
+    <string name="action_silence_title">Bisukan Panggilan (Abaikan)</string>
+    <string name="action_silence_sub">Membisukan nada dering dan menyembunyikan panggilan tanpa menutupnya, membiarkannya berdering secara alami.</string>
+
+    <string name="section_international_protection">Perlindungan Panggilan Internasional</string>
+    <string name="rule_block_international_title">Blokir Panggilan Internasional</string>
+    <string name="rule_block_international_sub">Deteksi ISO kartu SIM dan blokir panggilan luar wilayah SIM</string>
+
+    <string name="section_language_settings">Pengaturan Bahasa (App Language)</string>
+    <string name="label_app_language">Pilih Bahasa Aplikasi</string>
+    <string name="label_system_default">Default Sistem</string>
+
+    <string name="section_block_list_management">Manajemen Daftar Blokir</string>
+    <string name="btn_manage_block_list">Kelola Daftar Kustom (Wildcard &amp; E.164)</string>
+    <string name="btn_import_system_block_list">Impor Daftar Blokir Sistem Android</string>
+    <string name="btn_export_system_block_list">Sinkronkan Daftar ke Sistem Android</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">Daftar Blokir Sistem</string>
+    <string name="import_source_blocked_contact">Kontak Diblokir</string>
+    <string name="import_source_blocked_contact_with_name">Kontak Diblokir (%1$s)</string>
+    <string name="import_error_empty">Tidak ada nomor ditemukan di daftar sistem atau kontak</string>
+    <string name="import_summary_added_and_updated">Berhasil menambahkan %1$d nomor dan memperbarui %2$d catatan</string>
+    <string name="import_summary_added_only">Berhasil menambahkan %1$d nomor diblokir</string>
+    <string name="import_summary_updated_only">Berhasil memperbarui %1$d catatan nomor</string>
+    <string name="import_summary_already_latest">Daftar blokir saat ini sudah yang terbaru</string>
+
+    <string name="export_error_empty">Tidak ada nomor diblokir kustom untuk diekspor</string>
+    <string name="export_error_failed">Gagal mengekspor ke daftar sistem</string>
+    <string name="export_summary_added">Berhasil menyinkronkan %1$d nomor ke daftar sistem Android</string>
+    <string name="export_summary_already_exists">Semua nomor sudah ada di daftar sistem</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">Izin diperlukan agar dapat berfungsi dengan baik.</string>
+    <string name="toast_cannot_read_phone_number">Tidak dapat membaca nomor telepon</string>
+    <string name="toast_error">Kesalahan: %1$s</string>
+    <string name="toast_backup_created">Cadangan berhasil dibuat!</string>
+    <string name="toast_restore_success">Basis data berhasil dipulihkan!</string>
+    <string name="toast_dashboard_reset">Dasbor berhasil disetel ulang!</string>
+    <string name="toast_history_reset">Riwayat berhasil disetel ulang!</string>
+    <string name="toast_reset_success">Sukses</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">Lewati dulu</string>
+    <string name="label_password">Kata Sandi</string>
+    <string name="label_note_format">Catatan: %1$s</string>
+
+    <string name="section_data_management">Manajemen Data &amp; Cadangan</string>
+    <string name="btn_reset_dashboard">Setel Ulang Dasbor Perlindungan</string>
+    <string name="btn_reset_history">Setel Ulang Riwayat Pemblokiran</string>
+    <string name="btn_create_backup">Buat Cadangan Terenkripsi (.spamdb)</string>
+    <string name="btn_restore_database">Pulihkan Basis Data</string>
+    <string name="btn_reset_database">Setel Ulang &amp; Hapus Basis Data</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">Setel ulang Dasbor Perlindungan?</string>
+    <string name="dialog_reset_dashboard_message">Tindakan ini akan menghapus semua statistik dasbor secara permanen. Tidak dapat dibatalkan!</string>
+
+    <string name="dialog_reset_history_title">Setel ulang Riwayat Pemblokiran?</string>
+    <string name="dialog_reset_history_message">Tindakan ini akan menghapus semua catatan riwayat secara permanen. Tidak dapat dibatalkan!</string>
+
+    <string name="dialog_reset_title">Setel ulang dan hapus basis data?</string>
+    <string name="dialog_reset_message">Tindakan ini akan menghapus semua nomor diblokir dan riwayat secara permanen. Tidak dapat dibatalkan!</string>
+    <string name="dialog_confirm_reset">Hapus Semua</string>
+
+    <string name="dialog_backup_pwd_title">Atur Kata Sandi Cadangan</string>
+    <string name="dialog_backup_pwd_msg">Masukkan kata sandi untuk kunci AES-256. Kata sandi sama diperlukan untuk pemulihan.</string>
+    <string name="dialog_restore_pwd_title">Masukkan Kata Sandi Dekripsi</string>
+    <string name="dialog_restore_pwd_msg">Masukkan kata sandi yang digunakan untuk mengenkripsi berkas ini:</string>
+
+    <string name="dialog_dialer_role_title">Kontak diblokir berhasil diproses!</string>
+    <string name="dialog_dialer_role_processed_count">Berhasil memproses %1$d nomor diblokir.</string>
+    <string name="dialog_dialer_role_unlock_header">💡 Buka sisa daftar sistem dan sinkronkan:</string>
+    <string name="dialog_dialer_role_unlock_msg">Untuk membaca atau menulis ke daftar sistem Android, kebijakan sistem mengharuskan pengaturan CallBlocker sebagai \"Aplikasi Telepon Default\".</string>
+    <string name="dialog_dialer_role_tip">⚠️ Penting: Setelah pemrosesan, Anda HARUS kembali secara manual ke aplikasi telepon semula di pengaturan sistem (Pengaturan -&gt; Aplikasi Default -&gt; Aplikasi Telepon), jika tidak, Anda mungkin tidak dapat menerima panggilan secara normal!</string>
+    <string name="dialog_dialer_role_confirm">Atur sebagai Telepon Default</string>
+    <string name="note_auto_blocked">Panggilan ditolak ditambahkan secara otomatis</string>
+
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_confirm">Konfirmasi</string>
+    <string name="btn_keep_as_is">Pertahankan Saat Ini</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">Selamat Datang di CallBlocker</string>
+    <string name="onboarding_welcome_desc">Penjaga privasi utama Anda dari spam, telemarketing, dan panggilan yang tidak diinginkan. Kuat, sepenuhnya offline, dan aman.</string>
+    <string name="onboarding_privacy_title">Privasi Anda yang Utama</string>
+    <string name="onboarding_privacy_desc">Kami memerlukan akses ke Kontak dan Riwayat Panggilan Anda untuk mencocokkan nomor masuk. <b>Semua data diproses 100% secara lokal di perangkat Anda.</b> Kami tidak pernah mengunggah data Anda ke server mana pun.</string>
+    <string name="onboarding_btn_next">Selanjutnya</string>
+
+    <string name="onboarding_permission_title">Izin yang Diperlukan</string>
+    <string name="onboarding_permission_desc">CallBlocker memerlukan izin berikut agar berfungsi dengan baik. Harap berikan izin tersebut pada prompt berikutnya.</string>
+    <string name="onboarding_btn_grant_permissions">Berikan Izin</string>
+
+    <string name="onboarding_role_title">Langkah Terakhir: Peran Penyaringan Panggilan</string>
+    <string name="onboarding_role_desc">Untuk memblokir panggilan masuk secara aktif sebelum telepon Anda berdering, CallBlocker harus ditetapkan sebagai aplikasi Penyaringan Panggilan default.</string>
+    <string name="onboarding_btn_grant_role">Berikan Peran &amp; Mulai</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Peringatan Pemblokiran Panggilan</string>
+    <string name="notification_blocked_title">Panggilan Diblokir</string>
+    <string name="notification_blocked_text">Berhasil memblokir panggilan dari %1$s</string>
+</resources>

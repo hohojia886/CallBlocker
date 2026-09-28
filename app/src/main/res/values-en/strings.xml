@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Call Blocker</string>
+
+    <!-- Main Navigation Tabs -->
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_history">History</string>
+    <string name="tab_block_list">Block List</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- Role Warning Banner -->
+    <string name="banner_role_warning_title">Not Set as Default Call Screening App</string>
+    <string name="banner_role_warning_sub">To actively block spam and unknown calls before your phone rings, set Call Blocker as the default Call Screening app.</string>
+    <string name="btn_set_default_role">Set as Default App</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Call Protection Dashboard</string>
+    <string name="stat_today">Blocked Today</string>
+    <string name="stat_this_month">Blocked This Month</string>
+    <string name="stat_this_year">Blocked This Year</string>
+    <string name="stat_lifetime">Lifetime Blocked</string>
+    <string name="reason_breakdown_title">Block Reason Breakdown</string>
+    <string name="no_records_yet">No blocked records yet</string>
+    <string name="reason_no_number">Private / Unknown Number</string>
+    <string name="reason_non_contact">Non-Contact Call</string>
+    <string name="reason_international">International Call</string>
+    <string name="reason_blacklist">Custom Block List</string>
+    <string name="reason_other">Other</string>
+
+    <!-- History Screen -->
+    <string name="history_title">Interception History</string>
+    <string name="history_clear_all">Clear History</string>
+    <string name="history_empty">No call history records found</string>
+    <string name="chip_blocked">Blocked</string>
+    <string name="chip_allowed">Allowed</string>
+    <string name="chip_silenced">Silenced</string>
+
+    <!-- Block List Screen -->
+    <string name="block_list_title">Block List Management</string>
+    <string name="add_number_section_title">Add Block Number / Wildcard</string>
+    <string name="input_number_label">Enter Number or Prefix</string>
+    <string name="input_number_placeholder">e.g. +886912345678 or +886912*</string>
+    <string name="input_note_label">Note</string>
+    <string name="input_note_placeholder">e.g. Telemarketer</string>
+    <string name="btn_pick_contact">Pick from Contacts</string>
+    <string name="btn_add_to_block_list">Add to Block List</string>
+    <string name="dynamic_preview_warning">⚠️ Dynamic Impact Preview: This rule will block all calls from the following countries:</string>
+    <string name="search_placeholder">Search number or note...</string>
+    <string name="blocked_numbers_count">Blocked List (%1$d items)</string>
+    <string name="no_blocked_numbers">No blocked numbers currently. Tap button at bottom right to add.</string>
+    <string name="search_no_results">No blocked numbers found matching \"%1$s\"</string>
+    <string name="btn_add_blocked_number">Add Block Number</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Protection &amp; System Settings</string>
+    <string name="section_basic_rules">Blocking Rules</string>
+    <string name="rule_block_unknown_title">Block Unknown / Private Numbers</string>
+    <string name="rule_block_unknown_sub">Reject calls without Caller ID</string>
+    <string name="rule_block_non_contacts_title">Block Non-Contacts</string>
+    <string name="rule_block_non_contacts_sub">Allow calls only from contacts</string>
+    <string name="rule_auto_block_rejected_title">Auto-Add Rejected Calls to Block List</string>
+    <string name="rule_auto_block_rejected_sub">Auto-add blocked numbers</string>
+
+    <!-- Outgoing Callback Exemption Rule -->
+    <string name="rule_outgoing_exemption_title">Allow Recent Outgoing Callbacks</string>
+    <string name="rule_outgoing_exemption_sub">Allow callbacks from recent calls</string>
+    <string name="option_exemption_off">Off</string>
+    <string name="option_exemption_1_day">Within 1 Day</string>
+    <string name="option_exemption_3_days">Within 3 Days</string>
+    <string name="option_exemption_1_week">Within 1 Week</string>
+
+    <string name="section_interception_action">Interception Action</string>
+    <string name="action_reject_title">Reject Call (Hang up)</string>
+    <string name="action_reject_sub">Instantly disconnects the blocked caller.</string>
+    <string name="action_silence_title">Silence Call (Ignore)</string>
+    <string name="action_silence_sub">Mutes ringing and hides the call without hanging up, letting it ring out naturally.</string>
+
+    <string name="section_international_protection">International Call Protection</string>
+    <string name="rule_block_international_title">Auto-Block International Calls</string>
+    <string name="rule_block_international_sub">Block all overseas calls</string>
+
+    <string name="section_language_settings">App Language Settings</string>
+    <string name="label_app_language">Choose App Language</string>
+    <string name="label_system_default">System Default</string>
+
+    <string name="section_block_list_management">Block List Management</string>
+    <string name="btn_manage_block_list">Manage Custom Block List (Wildcard &amp; E.164)</string>
+    <string name="btn_import_system_block_list">Import Android System Block List</string>
+    <string name="btn_export_system_block_list">Sync List to Android System Block List</string>
+
+    <!-- Import / Export System Block List Messages -->
+    <string name="import_source_system_block_list">System Block List</string>
+    <string name="import_source_blocked_contact">Blocked Contact</string>
+    <string name="import_source_blocked_contact_with_name">Blocked Contact (%1$s)</string>
+    <string name="import_error_empty">No numbers found in system block list or blocked contacts</string>
+    <string name="import_summary_added_and_updated">Successfully added %1$d numbers and updated %2$d tags</string>
+    <string name="import_summary_added_only">Successfully added %1$d blocked numbers</string>
+    <string name="import_summary_updated_only">Successfully updated %1$d number tags</string>
+    <string name="import_summary_already_latest">Existing block list is already up to date</string>
+
+    <string name="export_error_empty">No custom blocked numbers to export</string>
+    <string name="export_error_failed">Failed to export to system block list</string>
+    <string name="export_summary_added">Successfully synced %1$d numbers to Android system block list</string>
+    <string name="export_summary_already_exists">All numbers already exist in system block list</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_permissions_required">Permissions are required to function properly.</string>
+    <string name="toast_cannot_read_phone_number">Cannot read phone number</string>
+    <string name="toast_error">Error: %1$s</string>
+    <string name="toast_backup_created">Backup Created!</string>
+    <string name="toast_restore_success">Restored Successfully!</string>
+    <string name="toast_dashboard_reset">Dashboard Reset!</string>
+    <string name="toast_history_reset">History Reset!</string>
+    <string name="toast_reset_success">Success</string>
+
+    <!-- Additional UI Labels -->
+    <string name="btn_skip_for_now">Skip for now</string>
+    <string name="label_password">Password</string>
+    <string name="label_note_format">Note: %1$s</string>
+
+    <string name="section_data_management">Data Management &amp; Backup</string>
+    <string name="btn_reset_dashboard">Reset Protection Dashboard</string>
+    <string name="btn_reset_history">Reset Interception History</string>
+    <string name="btn_create_backup">Create Encrypted Backup (.spamdb)</string>
+    <string name="btn_restore_database">Restore Database</string>
+    <string name="btn_reset_database">Reset &amp; Clear Database</string>
+
+    <!-- Dialogs & Prompts -->
+    <string name="dialog_reset_dashboard_title">Reset Protection Dashboard?</string>
+    <string name="dialog_reset_dashboard_message">This action will permanently clear all dashboard statistics and charts. This cannot be undone!</string>
+
+    <string name="dialog_reset_history_title">Reset Interception History?</string>
+    <string name="dialog_reset_history_message">This action will permanently delete all call interception history records. This cannot be undone!</string>
+
+    <string name="dialog_reset_title">Reset &amp; Clear Database?</string>
+    <string name="dialog_reset_message">This action will permanently delete all blocked numbers and call history records. This cannot be undone!</string>
+    <string name="dialog_confirm_reset">Clear Database</string>
+
+    <string name="dialog_backup_pwd_title">Set Backup Encryption Password</string>
+    <string name="dialog_backup_pwd_msg">Enter a password to derive the AES-256 encryption key. Same password is required for restoration.</string>
+    <string name="dialog_restore_pwd_title">Enter Decryption Password</string>
+    <string name="dialog_restore_pwd_msg">Enter the password used to encrypt this backup file:</string>
+
+    <string name="dialog_dialer_role_title">System Block List Processed!</string>
+    <string name="dialog_dialer_role_processed_count">Successfully processed %1$d blocked numbers.</string>
+    <string name="dialog_dialer_role_unlock_header">💡 Unlock Remaining System Block List &amp; Enable System Sync:</string>
+    <string name="dialog_dialer_role_unlock_msg">To read or write numbers to the Android native Phone app block list, Android system policy requires setting Call Blocker as the \"Default Phone App\".</string>
+    <string name="dialog_dialer_role_tip">⚠️ Important: After processing, you MUST manually switch back to your original Phone app in system settings (Settings -&gt; Default Apps -&gt; Phone App), otherwise you may not be able to receive incoming calls properly!</string>
+    <string name="dialog_dialer_role_confirm">Set Default Phone App</string>
+    <string name="note_auto_blocked">Auto-added rejected call</string>
+
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_keep_as_is">Keep Current</string>
+
+    <!-- Onboarding Screen -->
+    <string name="onboarding_welcome_title">Welcome to Call Blocker</string>
+    <string name="onboarding_welcome_desc">Your ultimate privacy guard against spam, telemarketing, and unwanted calls. Powerful, completely offline, and secure.</string>
+    <string name="onboarding_privacy_title">Your Privacy First</string>
+    <string name="onboarding_privacy_desc">We require access to your Contacts and Call Logs to match incoming numbers. <b>All data is processed 100% locally on your device.</b> We never upload your data to any server.</string>
+    <string name="onboarding_btn_next">Next</string>
+
+    <string name="onboarding_permission_title">Required Permissions</string>
+    <string name="onboarding_permission_desc">Call Blocker needs the following permissions to function correctly. Please grant them in the next prompt.</string>
+    <string name="onboarding_btn_grant_permissions">Grant Permissions</string>
+
+    <string name="onboarding_role_title">Final Step: Call Screening Role</string>
+    <string name="onboarding_role_desc">To actively block incoming calls before your phone rings, Call Blocker needs to be set as the default Call Screening app.</string>
+    <string name="onboarding_btn_grant_role">Grant Role &amp; Start</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Call Interception Alerts</string>
+    <string name="notification_blocked_title">Call Intercepted</string>
+    <string name="notification_blocked_text">Blocked a call from %1$s</string>
+</resources>
