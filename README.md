@@ -2,7 +2,7 @@
 
 [English](README.md) | [繁體中文](README_zh-TW.md)
 
-![Android](https://img.shields.io/badge/Android-16%2B%20(API%2026%2B)-brightgreen.svg)
+![Android](https://img.shields.io/badge/Android-8.0%2B%20(API%2026%2B)-brightgreen.svg)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4.20-blue.svg)
 ![Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-blue.svg)
 ![Architecture](https://img.shields.io/badge/Architecture-MVI%2FMVVM-orange.svg)
