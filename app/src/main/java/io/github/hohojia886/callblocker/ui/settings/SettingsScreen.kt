@@ -47,6 +47,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.os.LocaleListCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -272,17 +273,18 @@ fun SettingsScreen(
                         Spacer(modifier = Modifier.width(8.dp))
                         Surface(
                             color = MaterialTheme.colorScheme.primaryContainer,
-                            shape = MaterialTheme.shapes.extraSmall,
-                            modifier = Modifier.width(52.dp).height(32.dp)
+                            shape = MaterialTheme.shapes.extraSmall
                         ) {
-                            Box(contentAlignment = Alignment.Center) {
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                            ) {
                                 Text(
                                     text = currentLabel,
-                                    style = MaterialTheme.typography.labelSmall,
+                                    style = MaterialTheme.typography.labelMedium,
                                     fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                    maxLines = 1,
-                                    softWrap = false
+                                    textAlign = TextAlign.Center
                                 )
                             }
                         }

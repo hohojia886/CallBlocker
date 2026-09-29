@@ -117,8 +117,8 @@ The repository includes an embedded debug keystore (`app/keystore/debug.keystore
   ./gradlew :app:assembleDebug :app:assembleRelease
   ```
 - **Output Files**:
-  - Debug APK: `app/build/outputs/apk/debug/call-blocker-v1.0.0-debug.apk`
-  - Release APK (with R8 enabled): `app/build/outputs/apk/release/call-blocker-v1.0.0-release.apk`
+  - Debug APK: `app/build/outputs/apk/debug/call-blocker-v1.0.1-debug.apk`
+  - Release APK (with R8 enabled): `app/build/outputs/apk/release/call-blocker-v1.0.1-release.apk`
 
 ### 4. One-Click Install to Phone (`Install_APK.bat`)
 1. Connect your Android phone to your computer via USB and enable **USB Debugging**.

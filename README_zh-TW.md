@@ -117,8 +117,8 @@ app/src/main/java/io/github/hohojia886/callblocker/
   ./gradlew :app:assembleDebug :app:assembleRelease
   ```
 - **產出檔案路徑**：
-  - Debug APK: `app/build/outputs/apk/debug/call-blocker-v1.0.0-debug.apk`
-  - Release APK (開啟 R8 混淆與壓縮): `app/build/outputs/apk/release/call-blocker-v1.0.0-release.apk`
+  - Debug APK: `app/build/outputs/apk/debug/call-blocker-v1.0.1-debug.apk`
+  - Release APK (開啟 R8 混淆與壓縮): `app/build/outputs/apk/release/call-blocker-v1.0.1-release.apk`
 
 ### 4. 一鍵式 ADB 安裝至手機 (`Install_APK.bat`)
 1. 將您的 Android 手機透過 USB 連接至電腦，並開啟 **USB 偵錯 (USB Debugging)**。

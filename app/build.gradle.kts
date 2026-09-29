@@ -27,8 +27,8 @@ android {
         applicationId = "io.github.hohojia886.callblocker"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -76,7 +76,7 @@ android {
 androidComponents {
     onVariants { variant ->
         val variantName = variant.name
-        val vName = android.defaultConfig.versionName ?: "1.0.0"
+        val vName = android.defaultConfig.versionName ?: "1.0.1"
         variant.outputs.forEach { output ->
             output.outputFileName.set("call-blocker-v${vName}-${variantName}.apk")
         }
