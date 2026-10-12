@@ -76,7 +76,7 @@ android {
 androidComponents {
     onVariants { variant ->
         val variantName = variant.name
-        val vName = android.defaultConfig.versionName ?: "1.0.1"
+        val vName = android.defaultConfig.versionName ?: "1.0.2"
         variant.outputs.forEach { output ->
             output.outputFileName.set("call-blocker-v${vName}-${variantName}.apk")
         }

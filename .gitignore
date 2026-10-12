@@ -31,7 +31,3 @@ google-services.json
 
 # Android Profiling
 *.hprof
-
-# Build Scripts
-Build_APKs.bat
-Install_APK.bat
