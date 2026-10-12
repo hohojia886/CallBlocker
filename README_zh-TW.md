@@ -30,8 +30,9 @@
 - **多卡狀態偵測**：透過 `SubscriptionManager` 動態輪詢手機中所有已安裝 SIM 卡的國家 ISO 碼。
 - **精準跨國判斷**：比對來電號碼是否屬於任一 SIM 卡之本地國碼，有效避免雙卡雙待手機誤擋跨國來電。
 
-### 5. 🔍 萬用字元前綴比對與動態影響範圍預覽
+### 5. 🔍 萬用字元前綴比對與智慧號碼格式化
 - **E.164 國際標準化**：整合 Google `libphonenumber` 進行全球電話號碼標準化格式轉換。
+- **智慧格式化與國碼隱藏選項**：號碼內部數字區塊自動以 `-` 連字號分隔，並提供「本國號碼隱藏國碼」設定開關（如本國號碼顯示為 `0912-345-678` 或 `415-555-2671`，跨國號碼顯示為 `+886 912-345-678` 或 `+1 415-555-2671`）。
 - **萬用字元 `*` 規則**：支援萬用字元前綴（如 `+886912*`），可一鍵封鎖整個號碼區段。
 - **國碼動態影響預覽**：輸入國際前綴時，即時動態預覽預計受影響的國家與地區。
 
@@ -39,8 +40,9 @@
 - **高強度加密備份**：採用 `AES-256-GCM` 配合 `PBKDF2` 密碼衍生演算法（10,000 次反覆運算與獨立隨機 Salt/IV），將自訂封鎖名單匯出為 `.spamdb` 加密備份檔。
 - **100% 本機可攜性**：備份與還原全程於本機完成，完全不需將數據上傳至任何雲端或第三方伺服器。
 
-### 7. 🌐 16 國語言支援與專業深色主題
+### 7. 🌐 16 國語言支援與動態系統備註翻譯
 - **多國語言在地化 (i18n)**：100% 完整支援 16 種語言（繁體中文台/港、簡體中文、英文、日文、韓文、西班牙文、法文、德文、義大利文、葡萄牙文、俄文、越南文、泰文、印尼文）。
+- **預設備註動態翻譯**：系統預設備註（自動封鎖拒接電話、從系統匯入之號碼）會隨 App 語言即時自動切換翻譯，手動備註保持原樣。
 - **App 內即時語言切換**：整合 `AppCompatDelegate.setApplicationLocales()`，無需重啟 App 即可即時切換界面語言。
 - **高對比深色主題**：採用 Material 3 階層式深色主題，完全無硬編碼色彩，夜間閱讀舒適不刺眼。
 
@@ -71,9 +73,10 @@ app/src/main/java/io/github/hohojia886/callblocker/
     ├── ContactPickerHelper.kt         # 通訊錄選擇輔助工具
     ├── ContactsSyncWorker.kt          # 背景 WorkManager 通訊錄快取同步
     ├── CountryCodeProvider.kt         # ITU-T 國際國碼與影響預覽工具
+    ├── NoteUtils.kt                   # 系統預設備註 Tag 與動態在地化翻譯解析工具
     ├── NotificationHelper.kt          # 系統通知管理員
     ├── OutgoingCallHelper.kt          # 近期主動撥出紀錄查詢工具
-    ├── PhoneNumberUtils.kt            # E.164 格式化與萬用字元比對工具
+    ├── PhoneNumberUtils.kt            # E.164 格式化、顯示格式化與萬用字元比對工具
     ├── SystemBlockListExporter.kt     # 系統封鎖名單匯出工具
     └── SystemBlockListImporter.kt     # 系統封鎖名單匯入工具
 ```
@@ -117,8 +120,8 @@ app/src/main/java/io/github/hohojia886/callblocker/
   ./gradlew :app:assembleDebug :app:assembleRelease
   ```
 - **產出檔案路徑**：
-  - Debug APK: `app/build/outputs/apk/debug/call-blocker-v1.0.1-debug.apk`
-  - Release APK (開啟 R8 混淆與壓縮): `app/build/outputs/apk/release/call-blocker-v1.0.1-release.apk`
+  - Debug APK: `app/build/outputs/apk/debug/call-blocker-v1.0.2-debug.apk`
+  - Release APK (開啟 R8 混淆與壓縮): `app/build/outputs/apk/release/call-blocker-v1.0.2-release.apk`
 
 ### 4. 一鍵式 ADB 安裝至手機 (`Install_APK.bat`)
 1. 將您的 Android 手機透過 USB 連接至電腦，並開啟 **USB 偵錯 (USB Debugging)**。

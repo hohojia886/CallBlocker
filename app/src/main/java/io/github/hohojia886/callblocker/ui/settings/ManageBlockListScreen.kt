@@ -67,6 +67,8 @@ fun ManageBlockListScreen(
     val inputPattern by viewModel.inputPattern.collectAsStateWithLifecycle()
     val inputNote by viewModel.inputNote.collectAsStateWithLifecycle()
     val impactedCountries by viewModel.impactedCountries.collectAsStateWithLifecycle()
+    val hideDomestic by viewModel.hideDomesticCountryCode.collectAsStateWithLifecycle()
+    val activeSimIsos = remember { viewModel.activeSimIsos }
 
     var showAddNumberDialog by remember { mutableStateOf(false) }
 
@@ -159,6 +161,8 @@ fun ManageBlockListScreen(
                     ) { item ->
                         BlockedNumberItemCard(
                             item = item,
+                            activeSimIsos = activeSimIsos,
+                            hideDomesticCountryCode = hideDomestic,
                             onDelete = { viewModel.deleteBlockedNumber(item) }
                         )
                     }
@@ -278,8 +282,22 @@ fun ManageBlockListScreen(
 @Composable
 fun BlockedNumberItemCard(
     item: BlockedNumber,
+    activeSimIsos: Set<String> = emptySet(),
+    hideDomesticCountryCode: Boolean = true,
     onDelete: () -> Unit
 ) {
+    val context = LocalContext.current
+    val formattedPattern = remember(item.numberPattern, activeSimIsos, hideDomesticCountryCode) {
+        io.github.hohojia886.callblocker.util.PhoneNumberUtils.formatToDisplay(
+            item.numberPattern,
+            activeSimIsos,
+            hideDomesticCountryCode
+        )
+    }
+    val displayNote = remember(item.note, context) {
+        io.github.hohojia886.callblocker.util.NoteUtils.getLocalizedNote(item.note, context)
+    }
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
@@ -293,13 +311,13 @@ fun BlockedNumberItemCard(
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = item.numberPattern,
+                    text = formattedPattern,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
-                if (!item.note.isNullOrBlank()) {
+                if (!displayNote.isNullOrBlank()) {
                     Text(
-                        text = stringResource(R.string.label_note_format, item.note),
+                        text = stringResource(R.string.label_note_format, displayNote),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )

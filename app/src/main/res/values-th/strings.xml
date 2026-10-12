@@ -55,6 +55,8 @@
     <string name="rule_block_non_contacts_sub">อนุญาตเฉพาะเบอร์ที่บันทึกในสมุดโทรศัพท์</string>
     <string name="rule_auto_block_rejected_title">เพิ่มเบอร์ที่ปฏิเสธเข้าบล็อกอัตโนมัติ</string>
     <string name="rule_auto_block_rejected_sub">เพิ่มเบอร์ที่ปฏิเสธเข้า รายการบล็อก อัตโนมัติ</string>
+    <string name="pref_hide_domestic_country_code_title">ซ่อนรหัสประเทศสำหรับเบอร์ภายในประเทศ</string>
+    <string name="pref_hide_domestic_country_code_summary">จัดรูปแบบเบอร์ในประเทศโดยไม่แสดงรหัสประเทศ</string>
 
     <string name="section_interception_action">การดำเนินการเมื่อบล็อก</string>
     <string name="action_reject_title">ปฏิเสธสาย (วางสายทันที)</string>

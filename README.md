@@ -30,8 +30,9 @@
 - **Multi-SIM Awareness**: Dynamically polls all active SIM card country ISOs using `SubscriptionManager`.
 - **Accurate International Detection**: Evaluates incoming calls against all active SIM regions to prevent false blocks on dual-SIM devices.
 
-### 5. 🔍 Wildcard Pattern Matching & Dynamic Impact Preview
+### 5. 🔍 Wildcard Pattern Matching & Smart Number Formatting
 - **E.164 Standardization**: Formats phone numbers globally using Google `libphonenumber`.
+- **Smart Display & Domestic Country Code Toggle**: Formats numbers cleanly with hyphens and offers a configurable "Hide Domestic Country Code" setting (e.g. domestic numbers show as `0912-345-678` or `415-555-2671`, while international numbers show as `+886 912-345-678` or `+1 415-555-2671`).
 - **Wildcard `*` Prefix Rules**: Supports wildcard patterns (e.g., `+886912*`) to block entire number prefixes.
 - **Dynamic Country Code Preview**: Previews affected countries and territories in real-time when entering international prefixes.
 
@@ -39,8 +40,9 @@
 - **High-Security Backups**: Uses AES-256-GCM encryption with PBKDF2 key derivation (10,000 iterations + 128-bit random salt/IV) to export `.spamdb` backup files containing your custom block list.
 - **100% Offline Portability**: Backups can be encrypted and restored locally with a password without transmitting data to external servers.
 
-### 7. 🌐 16-Language Localization & Professional Onboarding
+### 7. 🌐 16-Language Localization & Dynamic System Notes
 - **Full Localization (i18n)**: 100% localized in 16 languages (Traditional Chinese TW/HK, Simplified Chinese, English, Japanese, Korean, Spanish, French, German, Italian, Portuguese, Russian, Vietnamese, Thai, and Indonesian).
+- **Dynamic System Note Translation**: System default notes (auto-blocked rejected calls, imported system block list entries) automatically adapt to the active app language, while preserving user-entered custom notes intact.
 - **In-App Instant Language Switching**: Integrates `AppCompatDelegate.setApplicationLocales()` for instant language switching without app restarts.
 - **High-Contrast Dark Theme**: Material 3 elevated dark theme for comfortable legibility and zero hardcoded UI colors.
 
@@ -71,9 +73,10 @@ app/src/main/java/io/github/hohojia886/callblocker/
     ├── ContactPickerHelper.kt         # Contact picker helper
     ├── ContactsSyncWorker.kt          # Background WorkManager contacts sync
     ├── CountryCodeProvider.kt         # ITU-T country codes and impact preview
+    ├── NoteUtils.kt                   # System default note tag & dynamic localization resolver
     ├── NotificationHelper.kt          # System notification manager
     ├── OutgoingCallHelper.kt          # Recent outgoing call log exemption query
-    ├── PhoneNumberUtils.kt            # E.164 formatting & wildcard matching
+    ├── PhoneNumberUtils.kt            # E.164 formatting, display formatting & wildcard matching
     ├── SystemBlockListExporter.kt     # System block list exporter
     └── SystemBlockListImporter.kt     # System block list importer
 ```
@@ -117,8 +120,8 @@ The repository includes an embedded debug keystore (`app/keystore/debug.keystore
   ./gradlew :app:assembleDebug :app:assembleRelease
   ```
 - **Output Files**:
-  - Debug APK: `app/build/outputs/apk/debug/call-blocker-v1.0.1-debug.apk`
-  - Release APK (with R8 enabled): `app/build/outputs/apk/release/call-blocker-v1.0.1-release.apk`
+  - Debug APK: `app/build/outputs/apk/debug/call-blocker-v1.0.2-debug.apk`
+  - Release APK (with R8 enabled): `app/build/outputs/apk/release/call-blocker-v1.0.2-release.apk`
 
 ### 4. One-Click Install to Phone (`Install_APK.bat`)
 1. Connect your Android phone to your computer via USB and enable **USB Debugging**.

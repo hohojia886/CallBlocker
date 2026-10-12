@@ -48,6 +48,8 @@ fun HistoryScreen(
     viewModel: HistoryViewModel = viewModel()
 ) {
     val historyList by viewModel.historyList.collectAsStateWithLifecycle()
+    val hideDomestic by viewModel.hideDomesticCountryCode.collectAsStateWithLifecycle()
+    val activeSimIsos = remember { viewModel.activeSimIsos }
 
     Column(
         modifier = Modifier
@@ -97,6 +99,8 @@ fun HistoryScreen(
                 ) { item ->
                     HistoryItemCard(
                         item = item,
+                        activeSimIsos = activeSimIsos,
+                        hideDomesticCountryCode = hideDomestic,
                         onDelete = { viewModel.deleteItem(item) }
                     )
                 }
@@ -109,10 +113,19 @@ fun HistoryScreen(
 @Composable
 fun HistoryItemCard(
     item: CallHistory,
+    activeSimIsos: Set<String> = emptySet(),
+    hideDomesticCountryCode: Boolean = true,
     onDelete: () -> Unit
 ) {
     val sdf = remember { SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.getDefault()) }
     val formattedDate = sdf.format(Date(item.callTime))
+    val formattedNumber = remember(item.incomingNumber, activeSimIsos, hideDomesticCountryCode) {
+        io.github.hohojia886.callblocker.util.PhoneNumberUtils.formatToDisplay(
+            item.incomingNumber,
+            activeSimIsos,
+            hideDomesticCountryCode
+        )
+    }
 
     val (chipLabel, chipBgColor, chipContentColor) = when (item.blockReason) {
         BlockReason.NO_NUMBER -> Triple(
@@ -163,7 +176,7 @@ fun HistoryItemCard(
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = item.incomingNumber,
+                    text = formattedNumber,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )

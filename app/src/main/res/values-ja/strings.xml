@@ -55,6 +55,8 @@
     <string name="rule_block_non_contacts_sub">電話帳に登録されている連絡先からの着信のみ許可します</string>
     <string name="rule_auto_block_rejected_title">拒否した番号を自動追加</string>
     <string name="rule_auto_block_rejected_sub">拒否またはブロックした電話番号を自動的にリストへ追加します</string>
+    <string name="pref_hide_domestic_country_code_title">国内番号の国コードを非表示</string>
+    <string name="pref_hide_domestic_country_code_summary">国内電話番号に国コードを表示しません</string>
 
     <!-- Outgoing Callback Exemption Rule -->
     <string name="rule_outgoing_exemption_title">最近の発信に対する折り返し電話を許可</string>

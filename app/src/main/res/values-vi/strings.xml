@@ -55,6 +55,8 @@
     <string name="rule_block_non_contacts_sub">Chỉ cho phép cuộc gọi từ các số có trong danh bạ</string>
     <string name="rule_auto_block_rejected_title">Tự động thêm cuộc gọi bị từ chối</string>
     <string name="rule_auto_block_rejected_sub">Tự động thêm các số bị từ chối vào danh sách chặn</string>
+    <string name="pref_hide_domestic_country_code_title">Ẩn mã quốc gia cho số trong nước</string>
+    <string name="pref_hide_domestic_country_code_summary">Định dạng số trong nước không bao gồm mã quốc gia</string>
 
     <string name="section_interception_action">Hành động chặn</string>
     <string name="action_reject_title">Từ chối cuộc gọi (Cúp máy)</string>

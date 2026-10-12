@@ -55,6 +55,8 @@
     <string name="rule_block_non_contacts_sub">Consenti solo le chiamate salvate nella rubrica</string>
     <string name="rule_auto_block_rejected_title">Aggiungi chiamate rifiutate alla lista</string>
     <string name="rule_auto_block_rejected_sub">Aggiungi automaticamente i numeri rifiutati alla lista di blocco</string>
+    <string name="pref_hide_domestic_country_code_title">Nascondi prefisso internazionale nazionale</string>
+    <string name="pref_hide_domestic_country_code_summary">Formatta i numeri nazionali senza prefisso internazionale</string>
 
     <string name="section_interception_action">Azione di Intercettazione</string>
     <string name="action_reject_title">Rifiuta Chiamata (Riaggancia)</string>

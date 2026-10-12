@@ -26,8 +26,8 @@ object SystemBlockListImporter {
         var isBlockedNumberContractRestricted = false
         val primarySimIso = PhoneNumberUtils.getPrimarySimCountryIso(context)
 
-        val sourceSystemBlockList = context.getString(R.string.import_source_system_block_list)
-        val sourceBlockedContactDefault = context.getString(R.string.import_source_blocked_contact)
+        val sourceSystemBlockList = NoteUtils.TAG_SYSTEM_BLOCK_LIST
+        val sourceBlockedContactDefault = NoteUtils.TAG_BLOCKED_CONTACT
 
         // 1. Query BlockedNumberContract
         try {
@@ -81,7 +81,7 @@ object SystemBlockListImporter {
                         val num = if (numCol >= 0) c.getString(numCol) else null
                         val name = if (nameCol >= 0) c.getString(nameCol) else null
                         val noteText = if (!name.isNullOrBlank()) {
-                            context.getString(R.string.import_source_blocked_contact_with_name, name)
+                            NoteUtils.buildBlockedContactWithNameTag(name)
                         } else {
                             sourceBlockedContactDefault
                         }

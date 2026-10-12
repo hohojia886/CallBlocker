@@ -87,6 +87,7 @@ fun SettingsScreen(
     val blockNonContacts by viewModel.blockNonContacts.collectAsStateWithLifecycle()
     val blockInternational by viewModel.blockInternational.collectAsStateWithLifecycle()
     val autoBlockRejected by viewModel.autoBlockRejected.collectAsStateWithLifecycle()
+    val hideDomesticCountryCode by viewModel.hideDomesticCountryCode.collectAsStateWithLifecycle()
     val outgoingExemptionDays by viewModel.outgoingCallbackExemptionDays.collectAsStateWithLifecycle()
     val blockAction by viewModel.blockAction.collectAsStateWithLifecycle()
 
@@ -233,6 +234,15 @@ fun SettingsScreen(
                     subtitle = stringResource(R.string.rule_auto_block_rejected_sub),
                     checked = autoBlockRejected,
                     onCheckedChange = { viewModel.setAutoBlockRejected(it) }
+                )
+
+                HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+
+                SettingSwitchRow(
+                    title = stringResource(R.string.pref_hide_domestic_country_code_title),
+                    subtitle = stringResource(R.string.pref_hide_domestic_country_code_summary),
+                    checked = hideDomesticCountryCode,
+                    onCheckedChange = { viewModel.setHideDomesticCountryCode(it) }
                 )
 
                 HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))

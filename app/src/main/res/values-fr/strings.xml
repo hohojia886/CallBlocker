@@ -60,6 +60,8 @@
     <string name="rule_block_non_contacts_sub">Autoriser uniquement les contacts</string>
     <string name="rule_auto_block_rejected_title">Ajouter automatiquement les appels rejetés</string>
     <string name="rule_auto_block_rejected_sub">Ajouter les numéros bloqués</string>
+    <string name="pref_hide_domestic_country_code_title">Masquer l\'indicatif pour les numéros nationaux</string>
+    <string name="pref_hide_domestic_country_code_summary">Formater les numéros nationaux sans préfixe pays</string>
 
     <!-- Outgoing Callback Exemption Rule -->
     <string name="rule_outgoing_exemption_title">Autoriser les rappels récents</string>

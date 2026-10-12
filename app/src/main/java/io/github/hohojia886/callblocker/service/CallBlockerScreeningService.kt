@@ -43,9 +43,10 @@ class CallBlockerScreeningService : CallScreeningService() {
                 val autoBlockRejectedSetting = prefs.autoBlockRejected.first()
                 val blockAction = prefs.blockAction.first() // 0 = Reject, 1 = Silence
                 val outgoingExemptionDays = prefs.outgoingCallbackExemptionDays.first()
+                val hideDomesticSetting = prefs.hideDomesticCountryCode.first()
 
                 val activeSimIsos = PhoneNumberUtils.getActiveSimCountryIsos(applicationContext)
-                val primaryCountryIso = activeSimIsos.firstOrNull() ?: "TW"
+                val primaryCountryIso = activeSimIsos.firstOrNull() ?: PhoneNumberUtils.getDefaultSystemRegion()
 
                 var shouldBlock = false
                 var blockReason = BlockReason.NONE
@@ -105,7 +106,7 @@ class CallBlockerScreeningService : CallScreeningService() {
                                 db.blockedNumberDao().insert(
                                     BlockedNumber(
                                         numberPattern = e164Number,
-                                        note = applicationContext.getString(R.string.note_auto_blocked)
+                                        note = io.github.hohojia886.callblocker.util.NoteUtils.TAG_AUTO_BLOCKED
                                     )
                                 )
                             }
@@ -133,7 +134,8 @@ class CallBlockerScreeningService : CallScreeningService() {
                             blockReason = blockReason
                         )
                     )
-                    NotificationHelper.showBlockedCallNotification(applicationContext, savedNumber)
+                    val displayFormattedNumber = PhoneNumberUtils.formatToDisplay(savedNumber, activeSimIsos, hideDomesticSetting)
+                    NotificationHelper.showBlockedCallNotification(applicationContext, displayFormattedNumber)
                 }
 
                 // Respond to Android Telecom Framework based on block action

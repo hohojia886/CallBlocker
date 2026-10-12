@@ -48,6 +48,10 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     val autoBlockRejected: StateFlow<Boolean> = prefs.autoBlockRejected
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
 
+    /** Flow emitting state for hiding domestic country code. */
+    val hideDomesticCountryCode: StateFlow<Boolean> = prefs.hideDomesticCountryCode
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), true)
+
     /** Flow emitting outgoing callback exemption period in days (0 = Off, 1 = 1 Day, 3 = 3 Days, 7 = 1 Week). */
     val outgoingCallbackExemptionDays: StateFlow<Int> = prefs.outgoingCallbackExemptionDays
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
@@ -74,6 +78,11 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     /** Updates auto-add rejected calls setting. */
     fun setAutoBlockRejected(enabled: Boolean) {
         viewModelScope.launch { prefs.setAutoBlockRejected(enabled) }
+    }
+
+    /** Updates hide domestic country code setting. */
+    fun setHideDomesticCountryCode(enabled: Boolean) {
+        viewModelScope.launch { prefs.setHideDomesticCountryCode(enabled) }
     }
 
     /** Updates outgoing callback exemption window in days. */

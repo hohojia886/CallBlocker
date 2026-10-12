@@ -18,10 +18,18 @@ object PhoneNumberUtils {
     private val phoneUtil: PhoneNumberUtil by lazy { PhoneNumberUtil.getInstance() }
 
     /**
+     * Obtains default region ISO from system locale, defaulting to "US" if unavailable.
+     */
+    fun getDefaultSystemRegion(): String {
+        val country = Locale.getDefault().country
+        return if (!country.isNullOrBlank()) country.uppercase(Locale.ROOT) else "US"
+    }
+
+    /**
      * Standardize input phone number to E.164 format.
      * Supports wildcard '*' characters (e.g. "+886912*" -> "+886912*").
      */
-    fun formatToE164(rawNumber: String?, defaultRegion: String = "TW"): String {
+    fun formatToE164(rawNumber: String?, defaultRegion: String = getDefaultSystemRegion()): String {
         if (rawNumber.isNullOrBlank()) return "UNKNOWN"
 
         val trimmed = rawNumber.trim()
@@ -60,10 +68,125 @@ object PhoneNumberUtils {
     }
 
     /**
+     * Formats input number or wildcard pattern for user-friendly UI display.
+     * Separates country code prefix with space and normalizes national digit blocks with hyphens.
+     * If [hideDomesticCountryCode] is true and number region matches active SIM ISO [userRegionIsos],
+     * formats in NATIONAL style (e.g. "0912-345-678" or "415-555-2671").
+     * Otherwise formats in INTERNATIONAL style (e.g. "+886 912-345-678" or "+1 415-555-2671").
+     */
+    fun formatToDisplay(
+        rawNumber: String?,
+        userRegionIsos: Set<String> = emptySet(),
+        hideDomesticCountryCode: Boolean = true,
+        defaultRegion: String = getDefaultSystemRegion()
+    ): String {
+        if (rawNumber.isNullOrBlank()) return "UNKNOWN"
+
+        val trimmed = rawNumber.trim()
+        if (trimmed.equals("UNKNOWN", ignoreCase = true)) return "UNKNOWN"
+        val region = defaultRegion.uppercase(Locale.ROOT)
+
+        if (trimmed.contains("*")) {
+            val starIndex = trimmed.indexOf("*")
+            val prefixPart = trimmed.substring(0, starIndex)
+            val suffixWildcard = trimmed.substring(starIndex)
+
+            if (prefixPart.isBlank()) return "*"
+
+            val formattedPrefix = tryFormatDisplay(prefixPart, userRegionIsos, hideDomesticCountryCode, region)
+            val separator = if (formattedPrefix.isNotEmpty() && formattedPrefix.last().isDigit()) "-" else ""
+            return formattedPrefix + separator + suffixWildcard
+        }
+
+        return tryFormatDisplay(trimmed, userRegionIsos, hideDomesticCountryCode, region)
+    }
+
+    /** Overload for single region string. */
+    fun formatToDisplay(
+        rawNumber: String?,
+        userRegionIso: String,
+        hideDomesticCountryCode: Boolean = true
+    ): String {
+        return formatToDisplay(rawNumber, setOf(userRegionIso), hideDomesticCountryCode, userRegionIso)
+    }
+
+    private fun tryFormatDisplay(
+        numberStr: String,
+        userRegionIsos: Set<String>,
+        hideDomesticCountryCode: Boolean,
+        defaultRegion: String
+    ): String {
+        return try {
+            val proto: Phonenumber.PhoneNumber = phoneUtil.parse(numberStr, defaultRegion)
+            val numberRegion = phoneUtil.getRegionCodeForNumber(proto)
+
+            val effectiveUserIsos = if (userRegionIsos.isNotEmpty()) {
+                userRegionIsos.map { it.uppercase(Locale.ROOT) }.toSet()
+            } else {
+                setOf(defaultRegion.uppercase(Locale.ROOT))
+            }
+
+            val isDomestic = numberRegion != null && effectiveUserIsos.contains(numberRegion.uppercase(Locale.ROOT))
+
+            var rawFormatted = if (isDomestic && hideDomesticCountryCode) {
+                phoneUtil.format(proto, PhoneNumberUtil.PhoneNumberFormat.NATIONAL)
+            } else {
+                phoneUtil.format(proto, PhoneNumberUtil.PhoneNumberFormat.INTERNATIONAL)
+            }
+
+            // Universal national trunk prefix handling for partial/wildcard domestic numbers across all regions
+            if (isDomestic && hideDomesticCountryCode) {
+                // Ensure national trunk prefix if needed for partial numbers
+                val exampleNumber = phoneUtil.getExampleNumber(numberRegion)
+                if (exampleNumber != null) {
+                    val exampleNational = phoneUtil.format(exampleNumber, PhoneNumberUtil.PhoneNumberFormat.NATIONAL)
+                    val digitIndex = exampleNational.indexOfFirst { it.isDigit() }
+                    if (digitIndex >= 0 && exampleNational[digitIndex] == '0' && !rawFormatted.startsWith("0")) {
+                        rawFormatted = "0$rawFormatted"
+                    }
+                }
+            }
+
+            formatWithHyphens(rawFormatted)
+        } catch (_: Exception) {
+            numberStr
+        }
+    }
+
+    /**
+     * Converts formatted number so country code (e.g. "+886" / "+1") is followed by a space,
+     * and space separators within the national number part are converted to hyphens "-".
+     * Also strips surrounding parentheses from national format like "(415) 555-2671" -> "415-555-2671".
+     */
+    private fun formatWithHyphens(formattedStr: String): String {
+        val str = formattedStr.trim()
+        if (str.startsWith("+")) {
+            val spaceIndex = str.indexOf(" ")
+            if (spaceIndex > 0) {
+                val countryCodePart = str.substring(0, spaceIndex)
+                val nationalPart = str.substring(spaceIndex + 1)
+                    .replace("(", "")
+                    .replace(")", "")
+                    .replace(" ", "-")
+                    .replace("--", "-")
+                    .trim('-')
+                return "$countryCodePart $nationalPart"
+            }
+        }
+
+        return str
+            .replace("(", "")
+            .replace(")", "")
+            .replace(" ", "-")
+            .replace("--", "-")
+            .trim('-')
+    }
+
+    /**
      * Check if an incoming E.164 number matches a stored pattern.
      * Stored pattern can be an exact E.164 number or contain wildcard '*' (e.g. "+886912*").
      */
-    fun matchesPattern(incomingNumber: String, pattern: String, defaultRegion: String = "TW"): Boolean {
+    fun matchesPattern(incomingNumber: String, pattern: String, defaultRegion: String = getDefaultSystemRegion()): Boolean {
         if (pattern.isBlank()) return false
         val normalizedIncoming = formatToE164(incomingNumber, defaultRegion)
         val normalizedPattern = formatToE164(pattern, defaultRegion)
@@ -85,7 +208,7 @@ object PhoneNumberUtils {
     fun isInternational(incomingNumber: String, userRegionIsos: Set<String>): Boolean {
         if (userRegionIsos.isEmpty()) return false
 
-        val defaultRegion = userRegionIsos.firstOrNull() ?: "TW"
+        val defaultRegion = userRegionIsos.firstOrNull() ?: getDefaultSystemRegion()
         val formatted = formatToE164(incomingNumber, defaultRegion)
         if (!formatted.startsWith("+")) return false
 
@@ -151,15 +274,15 @@ object PhoneNumberUtils {
             when {
                 !simIso.isNullOrBlank() -> countryIsos.add(simIso.uppercase(Locale.ROOT))
                 !networkIso.isNullOrBlank() -> countryIsos.add(networkIso.uppercase(Locale.ROOT))
-                else -> countryIsos.add("TW")
+                else -> countryIsos.add(getDefaultSystemRegion())
             }
         }
 
         return countryIsos
     }
 
-    /** Helper retrieving primary active SIM country ISO, defaulting to "TW" if unavailable. */
+    /** Helper retrieving primary active SIM country ISO, defaulting to system locale region if unavailable. */
     fun getPrimarySimCountryIso(context: Context): String {
-        return getActiveSimCountryIsos(context).firstOrNull() ?: "TW"
+        return getActiveSimCountryIsos(context).firstOrNull() ?: getDefaultSystemRegion()
     }
 }

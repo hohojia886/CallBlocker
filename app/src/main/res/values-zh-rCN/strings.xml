@@ -60,6 +60,8 @@
     <string name="rule_block_non_contacts_sub">仅允许通讯录联系人拨入</string>
     <string name="rule_auto_block_rejected_title">自动将拒接电话加入拦截名单</string>
     <string name="rule_auto_block_rejected_sub">拦截时自动将号码加入名单</string>
+    <string name="pref_hide_domestic_country_code_title">本国号码隐藏国码</string>
+    <string name="pref_hide_domestic_country_code_summary">本国号码不显示国码前缀</string>
 
     <!-- Outgoing Callback Exemption Rule -->
     <string name="rule_outgoing_exemption_title">允许近期主动拨出电话回拨</string>

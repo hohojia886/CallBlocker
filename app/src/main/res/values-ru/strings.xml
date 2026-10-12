@@ -55,6 +55,8 @@
     <string name="rule_block_non_contacts_sub">Разрешать звонки только от номеров из записной книжки</string>
     <string name="rule_auto_block_rejected_title">Автоматически добавлять отклоненные звонки</string>
     <string name="rule_auto_block_rejected_sub">Автоматически добавлять отклоненные номера в черный список</string>
+    <string name="pref_hide_domestic_country_code_title">Скрывать код страны для местных номеров</string>
+    <string name="pref_hide_domestic_country_code_summary">Форматировать местные номера без кода страны</string>
 
     <string name="section_interception_action">Действие при блокировке</string>
     <string name="action_reject_title">Сбросить вызов (Reject)</string>

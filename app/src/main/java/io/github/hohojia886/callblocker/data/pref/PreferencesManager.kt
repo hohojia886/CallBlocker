@@ -27,6 +27,7 @@ class PreferencesManager(context: Context) {
         val IS_ONBOARDING_COMPLETED = booleanPreferencesKey("is_onboarding_completed")
         val BLOCK_ACTION = intPreferencesKey("block_action")
         val OUTGOING_CALLBACK_EXEMPTION_DAYS = intPreferencesKey("outgoing_callback_exemption_days")
+        val HIDE_DOMESTIC_COUNTRY_CODE = booleanPreferencesKey("hide_domestic_country_code")
     }
 
     /** Flow emitting whether unknown/private number blocking is enabled. */
@@ -62,6 +63,11 @@ class PreferencesManager(context: Context) {
     /** Flow emitting the outgoing callback exemption window in days (0 = Off, 1 = 1 Day, 3 = 3 Days, 7 = 1 Week). */
     val outgoingCallbackExemptionDays: Flow<Int> = appContext.dataStore.data.map { preferences ->
         preferences[OUTGOING_CALLBACK_EXEMPTION_DAYS] ?: 0
+    }
+
+    /** Flow emitting whether domestic country code should be hidden for local numbers (default true). */
+    val hideDomesticCountryCode: Flow<Boolean> = appContext.dataStore.data.map { preferences ->
+        preferences[HIDE_DOMESTIC_COUNTRY_CODE] ?: true
     }
 
     /** Updates the unknown/private number blocking preference. */
@@ -110,6 +116,13 @@ class PreferencesManager(context: Context) {
     suspend fun setOutgoingCallbackExemptionDays(days: Int) {
         appContext.dataStore.edit { preferences ->
             preferences[OUTGOING_CALLBACK_EXEMPTION_DAYS] = days
+        }
+    }
+
+    /** Updates the preference for hiding domestic country codes. */
+    suspend fun setHideDomesticCountryCode(enabled: Boolean) {
+        appContext.dataStore.edit { preferences ->
+            preferences[HIDE_DOMESTIC_COUNTRY_CODE] = enabled
         }
     }
 }

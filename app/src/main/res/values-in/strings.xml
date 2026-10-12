@@ -55,6 +55,8 @@
     <string name="rule_block_non_contacts_sub">Hanya izinkan panggilan dari kontak yang tersimpan</string>
     <string name="rule_auto_block_rejected_title">Otomatis Tambah Panggilan Ditolak</string>
     <string name="rule_auto_block_rejected_sub">Otomatis tambahkan nomor yang ditolak ke daftar blokir</string>
+    <string name="pref_hide_domestic_country_code_title">Sembunyikan Kode Negara Domestik</string>
+    <string name="pref_hide_domestic_country_code_summary">Format nomor lokal tanpa awalan kode negara</string>
 
     <string name="section_interception_action">Tindakan Pemblokiran</string>
     <string name="action_reject_title">Tolak Panggilan (Tutup)</string>

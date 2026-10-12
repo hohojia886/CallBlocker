@@ -55,6 +55,8 @@
     <string name="rule_block_non_contacts_sub">Permitir apenas chamadas salvas na sua agenda</string>
     <string name="rule_auto_block_rejected_title">Adicionar chamadas rejeitadas à lista</string>
     <string name="rule_auto_block_rejected_sub">Adicionar automaticamente números rejeitados à lista de bloqueio</string>
+    <string name="pref_hide_domestic_country_code_title">Ocultar código de país doméstico</string>
+    <string name="pref_hide_domestic_country_code_summary">Formatar números locais sem prefixo de país</string>
 
     <string name="section_interception_action">Ação de Interceptação</string>
     <string name="action_reject_title">Rejeitar Chamada (Desligar)</string>

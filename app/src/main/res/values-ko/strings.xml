@@ -55,6 +55,8 @@
     <string name="rule_block_non_contacts_sub">전화번호부에 저장된 연락처의 전화만 수신 허용합니다</string>
     <string name="rule_auto_block_rejected_title">거절한 전화 차단 목록에 자동 추가</string>
     <string name="rule_auto_block_rejected_sub">전화를 거절하거나 차단할 때 해당 번호를 차단 목록에 자동 등록합니다</string>
+    <string name="pref_hide_domestic_country_code_title">국내 전화번호 국가 코드 숨기기</string>
+    <string name="pref_hide_domestic_country_code_summary">국내 전화번호에 국가 코드를 표시하지 않습니다</string>
 
     <!-- Outgoing Callback Exemption Rule -->
     <string name="rule_outgoing_exemption_title">최근 발신 전화 회신 허용</string>

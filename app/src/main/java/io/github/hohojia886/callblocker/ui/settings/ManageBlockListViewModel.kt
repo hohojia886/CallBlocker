@@ -8,15 +8,17 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import io.github.hohojia886.callblocker.data.db.AppDatabase
 import io.github.hohojia886.callblocker.data.db.BlockedNumber
+import io.github.hohojia886.callblocker.data.pref.PreferencesManager
 import io.github.hohojia886.callblocker.util.CountryCodeProvider
 import io.github.hohojia886.callblocker.util.CountryInfo
+import io.github.hohojia886.callblocker.util.NoteUtils
 import io.github.hohojia886.callblocker.util.PhoneNumberUtils
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
@@ -24,22 +26,42 @@ class ManageBlockListViewModel(application: Application) : AndroidViewModel(appl
 
     private val db = AppDatabase.getInstance(application)
     private val dao = db.blockedNumberDao()
+    private val prefs = PreferencesManager(application)
+
+    /** Flow emitting whether domestic country code should be hidden for local numbers. */
+    val hideDomesticCountryCode: StateFlow<Boolean> = prefs.hideDomesticCountryCode
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), true)
+
+    /** Active SIM country ISOs. */
+    val activeSimIsos: Set<String>
+        get() = PhoneNumberUtils.getActiveSimCountryIsos(getApplication())
 
     private val _searchQuery = MutableStateFlow("")
     /** Current search query string state flow. */
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
 
-    /** Flow emitting blocked numbers filtered by SQLite query in real-time. */
-    @OptIn(ExperimentalCoroutinesApi::class)
-    val filteredBlockedNumbers: StateFlow<List<BlockedNumber>> = _searchQuery
-        .flatMapLatest { query ->
-            if (query.isBlank()) {
-                dao.getAll()
-            } else {
-                dao.search(query)
+    /** Flow emitting blocked numbers filtered in real-time by raw pattern, formatted display pattern, or localized note. */
+    val filteredBlockedNumbers: StateFlow<List<BlockedNumber>> = combine(
+        dao.getAll(),
+        _searchQuery,
+        prefs.hideDomesticCountryCode
+    ) { list, query, hideDomestic ->
+        if (query.isBlank()) {
+            list
+        } else {
+            val trimmed = query.trim()
+            val simIsos = activeSimIsos
+            list.filter { item ->
+                val rawPattern = item.numberPattern
+                val displayPattern = PhoneNumberUtils.formatToDisplay(rawPattern, simIsos, hideDomestic)
+                val localizedNote = NoteUtils.getLocalizedNote(item.note, getApplication()) ?: ""
+
+                rawPattern.contains(trimmed, ignoreCase = true) ||
+                        displayPattern.contains(trimmed, ignoreCase = true) ||
+                        localizedNote.contains(trimmed, ignoreCase = true)
             }
         }
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     private val _inputPattern = MutableStateFlow("")
     /** State flow holding input pattern text. */

@@ -60,6 +60,8 @@
     <string name="rule_block_non_contacts_sub">Allow calls only from contacts</string>
     <string name="rule_auto_block_rejected_title">Auto-Add Rejected Calls to Block List</string>
     <string name="rule_auto_block_rejected_sub">Auto-add blocked numbers</string>
+    <string name="pref_hide_domestic_country_code_title">Hide Domestic Country Code</string>
+    <string name="pref_hide_domestic_country_code_summary">Format local numbers without country code prefix</string>
 
     <!-- Outgoing Callback Exemption Rule -->
     <string name="rule_outgoing_exemption_title">Allow Recent Outgoing Callbacks</string>
